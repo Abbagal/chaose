@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
 import MissionStatement from "@/components/home/MissionStatement";
 import SANJAYPreview from "@/components/home/SANJAYPreview";
+import SanjayCapabilities from "@/components/home/SanjayCapabilities";
 import Capabilities from "@/components/home/Capabilities";
 import Industries from "@/components/home/Industries";
 import Technology from "@/components/home/Technology";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <MissionStatement />
       <SANJAYPreview />
+      <SanjayCapabilities />
       <Capabilities />
       <Industries />
       <Technology />
