@@ -45,17 +45,17 @@ function CapabilityCard({ cap, index }: { cap: typeof PLATFORM_CAPABILITIES[0]; 
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="relative bg-[#100D1F] border border-white/[0.06] p-6 group hover:border-[#8B5CF6]/20 transition-all duration-300"
+      className="relative bg-[#FFFFFF] border border-black/[0.06] p-6 group hover:border-[#8B5CF6]/20 transition-all duration-300"
     >
       <div className="flex items-start gap-4">
         <div className="w-9 h-9 flex items-center justify-center border border-[#8B5CF6]/20 text-[#8B5CF6] flex-shrink-0 group-hover:border-[#8B5CF6]/50 transition-colors">
           <Icon size={16} />
         </div>
         <div>
-          <h3 className="text-sm font-tight font-bold uppercase tracking-wide text-white mb-2">
+          <h3 className="text-sm font-tight font-bold uppercase tracking-wide text-black mb-2">
             {cap.title}
           </h3>
-          <p className="text-white/35 text-xs leading-relaxed font-grotesk">
+          <p className="text-black/35 text-xs leading-relaxed font-grotesk">
             {cap.desc}
           </p>
         </div>
@@ -70,7 +70,7 @@ export default function PlatformPage() {
   const archInView = useInView(archRef, { once: true });
 
   return (
-    <div className="bg-[#07060F] min-h-screen">
+    <div className="bg-[#FFFFFF] min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 tactical-grid opacity-50" />
@@ -82,7 +82,7 @@ export default function PlatformPage() {
         </div>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07060F]/60 via-[#07060F]/30 to-[#07060F]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FFFFFF]/60 via-[#FFFFFF]/30 to-[#FFFFFF]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24">
           {/* Badge */}
@@ -112,7 +112,7 @@ export default function PlatformPage() {
               Sovereign Decision Intelligence Platform
             </div>
             <div className="glow-line max-w-xl mb-8" />
-            <p className="text-white/50 text-xl leading-relaxed font-grotesk max-w-2xl mb-10">
+            <p className="text-black/50 text-xl leading-relaxed font-grotesk max-w-2xl mb-10">
               SANJAY integrates intelligence sources, sensor networks, operational databases, geospatial information, communications systems, and AI models into a unified operational picture — accessible in the most contested environments.
             </p>
             <div className="flex gap-4">
@@ -125,7 +125,7 @@ export default function PlatformPage() {
               </Link>
               <Link
                 href="#capabilities"
-                className="flex items-center gap-3 px-8 py-4 border border-white/20 text-white/60 font-medium text-sm tracking-wider uppercase hover:border-white/40 hover:text-white transition-all"
+                className="flex items-center gap-3 px-8 py-4 border border-black/20 text-black/60 font-medium text-sm tracking-wider uppercase hover:border-black/40 hover:text-black transition-all"
               >
                 View Capabilities
               </Link>
@@ -135,7 +135,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Capabilities grid */}
-      <section id="capabilities" className="relative py-24 bg-[#07060F]">
+      <section id="capabilities" className="relative py-24 bg-[#FFFFFF]">
         <div className="absolute inset-0 bg-grid opacity-25" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-4">
@@ -144,7 +144,7 @@ export default function PlatformPage() {
               Platform Capabilities
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white mb-12 leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-black mb-12 leading-tight">
             11 Core Capabilities.<br />
             <span className="gradient-text-cyan">One Unified System.</span>
           </h2>
@@ -158,7 +158,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Architecture */}
-      <section ref={archRef} className="relative py-24 bg-[#100D1F]">
+      <section ref={archRef} className="relative py-24 bg-[#FFFFFF]">
         <div className="absolute inset-0 tactical-grid opacity-30" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B5CF6]/15 to-transparent" />
 
@@ -171,19 +171,19 @@ export default function PlatformPage() {
           </div>
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white mb-8 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-black mb-8 leading-tight">
                 Sovereign.<br />
                 <span className="gradient-text-cyan">Air-Gapped.</span><br />
                 Mission-Ready.
               </h2>
-              <p className="text-white/40 text-base leading-relaxed font-grotesk mb-8">
+              <p className="text-black/40 text-base leading-relaxed font-grotesk mb-8">
                 SANJAY is designed from the ground up for classified deployment. No cloud dependency. No data leaves your infrastructure. Full sovereign control.
               </p>
               <div className="space-y-1">
                 {["FIPS 140-2 compliant encryption", "Zero-trust network architecture", "Air-gapped deployment ready", "Hardware security module integration", "Multi-level security (MLS) support", "Common Criteria evaluation available"].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 py-2">
                     <div className="w-1 h-1 bg-[#22D3EE] flex-shrink-0" />
-                    <span className="text-sm text-white/50 font-grotesk">{item}</span>
+                    <span className="text-sm text-black/50 font-grotesk">{item}</span>
                   </div>
                 ))}
               </div>
@@ -197,20 +197,20 @@ export default function PlatformPage() {
                   initial={{ opacity: 0, x: 30 }}
                   animate={archInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex items-center gap-4 p-4 border border-white/[0.06] bg-[#07060F]/50 group hover:border-white/10 transition-colors"
+                  className="flex items-center gap-4 p-4 border border-black/[0.06] bg-[#FFFFFF]/50 group hover:border-black/10 transition-colors"
                 >
                   <div className="font-mono text-[10px] tracking-widest uppercase w-20 flex-shrink-0 text-right" style={{ color: `${layer.color}60` }}>
                     {layer.layer}
                   </div>
                   <div className="w-px h-8 flex-shrink-0" style={{ background: layer.color, opacity: 0.3 }} />
                   <div>
-                    <p className="text-sm text-white/50 font-grotesk">{layer.desc}</p>
+                    <p className="text-sm text-black/50 font-grotesk">{layer.desc}</p>
                   </div>
                   <div className="ml-auto w-2 h-2 flex-shrink-0" style={{ background: layer.color, opacity: 0.4 }} />
                 </motion.div>
               ))}
               {/* Version info */}
-              <div className="pt-4 font-mono text-[10px] text-white/20 tracking-widest text-right uppercase">
+              <div className="pt-4 font-mono text-[10px] text-black/20 tracking-widest text-right uppercase">
                 SANJAY v2.4.1 // PRODUCTION BUILD
               </div>
             </div>
@@ -219,14 +219,14 @@ export default function PlatformPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 bg-[#07060F]">
+      <section className="relative py-24 bg-[#FFFFFF]">
         <div className="absolute inset-0 bg-grid opacity-25" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <span className="classified-badge">RESTRICTED ACCESS</span>
-          <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white mt-8 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-black mt-8 mb-6">
             Ready to Deploy <span className="gradient-text-cyan">SANJAY</span>?
           </h2>
-          <p className="text-white/40 text-base font-grotesk mb-8">
+          <p className="text-black/40 text-base font-grotesk mb-8">
             SANJAY is available for sovereign deployment to qualified government and defence organizations. Contact our team for evaluation access.
           </p>
           <Link

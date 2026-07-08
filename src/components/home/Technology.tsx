@@ -101,7 +101,7 @@ function TRLBar({ trl, color, animate }: { trl: number; color: string; animate: 
             height: 12,
             background: i < trl
               ? `linear-gradient(to top, ${color}, ${color}90)`
-              : "rgba(255,255,255,0.08)",
+              : "rgba(15,23,42,0.08)",
             transformOrigin: "bottom",
             boxShadow: i < trl ? `0 0 4px ${color}60` : "none",
           }}
@@ -123,7 +123,7 @@ export default function Technology() {
     <section
       ref={ref}
       id="technology"
-      style={{ background: "#07060F", position: "relative", overflow: "hidden" }}
+      style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}
     >
       <div className="absolute inset-0 bg-grid" style={{ opacity: 0.25 }} />
       <div className="absolute inset-0 mesh-bg" />
@@ -185,7 +185,7 @@ export default function Technology() {
               >
                 Proven
               </span>
-              <span style={{ color: "rgba(255,255,255,0.65)", display: "block" }}>Systems.</span>
+              <span style={{ color: "rgba(15,23,42,0.65)", display: "block" }}>Systems.</span>
             </h2>
             <div>
               <p
@@ -193,7 +193,7 @@ export default function Technology() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "0.9rem",
                   lineHeight: 1.8,
-                  color: "rgba(255,255,255,0.35)",
+                  color: "rgba(15,23,42,0.35)",
                   marginBottom: "1.5rem",
                 }}
               >
@@ -219,7 +219,7 @@ export default function Technology() {
         </motion.div>
 
         {/* Tech matrix with 3D hover */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px perspective-container" style={{ background: "rgba(255,255,255,0.03)" }}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px perspective-container" style={{ background: "rgba(15,23,42,0.03)" }}>
           {DOMAINS.map((tech, i) => (
             <motion.div
               key={i}
@@ -229,7 +229,7 @@ export default function Technology() {
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
               style={{
-                background: active === i ? "rgba(14,22,32,0.99)" : "rgba(6,9,14,0.99)",
+                background: active === i ? "rgba(255,255,255,0.99)" : "rgba(6,9,14,0.99)",
                 padding: "1.75rem",
                 cursor: "default",
                 transition: "background 0.25s, box-shadow 0.25s, transform 0.2s",
@@ -268,7 +268,7 @@ export default function Technology() {
 
               {/* ID + short */}
               <div className="flex items-center justify-between mb-4">
-                <span className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.16)" }}>
+                <span className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.16)" }}>
                   {tech.id}
                 </span>
                 <span
@@ -307,7 +307,7 @@ export default function Technology() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "0.8rem",
                   lineHeight: 1.7,
-                  color: "rgba(255,255,255,0.28)",
+                  color: "rgba(15,23,42,0.28)",
                   marginBottom: "1rem",
                 }}
               >
@@ -331,7 +331,7 @@ export default function Technology() {
                   >
                     <div
                       className="grid grid-cols-2 gap-1 pt-3"
-                      style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
+                      style={{ borderTop: "1px solid rgba(15,23,42,0.05)" }}
                     >
                       {tech.sub.map((s, j) => (
                         <motion.div
@@ -376,7 +376,7 @@ export default function Technology() {
               <div className="terminal-line mb-1" style={{ fontSize: 9, color: "rgba(139,92,246,0.35)" }}>
                 RESEARCH ACCESS
               </div>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.32)" }}>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(15,23,42,0.32)" }}>
                 Publications, technical papers, and capability demonstrations available to cleared partners under NDA.
               </p>
             </div>

@@ -19,7 +19,7 @@ export default function CTA() {
   return (
     <section
       ref={ref}
-      style={{ background: "#080C12", position: "relative", overflow: "hidden" }}
+      style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}
     >
       {/* Grid */}
       <div className="absolute inset-0 tactical-grid" style={{ opacity: 0.5 }} />
@@ -169,7 +169,7 @@ export default function CTA() {
               fontFamily: "'Inter', sans-serif",
               fontSize: "1.05rem",
               lineHeight: 1.7,
-              color: "rgba(255,255,255,0.38)",
+              color: "rgba(15,23,42,0.38)",
               maxWidth: 540,
               margin: "0 auto 3rem",
             }}
@@ -191,7 +191,7 @@ export default function CTA() {
           {/* Process steps */}
           <div
             className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px text-left perspective-container"
-            style={{ background: "rgba(255,255,255,0.03)", maxWidth: 900, margin: "0 auto" }}
+            style={{ background: "rgba(15,23,42,0.03)", maxWidth: 900, margin: "0 auto" }}
           >
             {PROCESS.map((p, i) => (
               <motion.div
@@ -248,7 +248,7 @@ export default function CTA() {
                 >
                   {p.label}
                 </div>
-                <p className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.25)", lineHeight: 1.6 }}>
+                <p className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.25)", lineHeight: 1.6 }}>
                   {p.desc}
                 </p>
               </motion.div>
@@ -256,7 +256,7 @@ export default function CTA() {
           </div>
 
           {/* Fine print */}
-          <p className="terminal-line mt-8" style={{ fontSize: 9, color: "rgba(255,255,255,0.12)", letterSpacing: "0.15em" }}>
+          <p className="terminal-line mt-8" style={{ fontSize: 9, color: "rgba(15,23,42,0.12)", letterSpacing: "0.15em" }}>
             ENGAGEMENTS REQUIRE VERIFIED GOVERNMENT OR INSTITUTIONAL AUTHORIZATION // CHAOS-ENGAGE-PROTO-v2.4
           </p>
         </motion.div>

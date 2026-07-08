@@ -31,7 +31,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-[#07060F] min-h-screen pt-20">
+    <div className="bg-[#FFFFFF] min-h-screen pt-20">
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
@@ -49,13 +49,13 @@ export default function ContactPage() {
               <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">Engage Chaos</span>
             </div>
             <h1 className="text-5xl lg:text-8xl font-tight font-black uppercase leading-[0.9] tracking-tight mb-8">
-              <span className="text-white">Build The Future</span>
+              <span className="text-black">Build The Future</span>
               <br />
               <span className="gradient-text-cyan">Of Operational</span>
               <br />
-              <span className="text-white">Intelligence</span>
+              <span className="text-black">Intelligence</span>
             </h1>
-            <p className="text-white/50 text-xl leading-relaxed font-grotesk max-w-2xl">
+            <p className="text-black/50 text-xl leading-relaxed font-grotesk max-w-2xl">
               Chaos works with select government and defence partners. Use this form to request a conversation with our team.
             </p>
           </motion.div>
@@ -81,13 +81,13 @@ export default function ContactPage() {
                   <div className="font-mono text-[11px] text-[#22D3EE]/60 tracking-widest uppercase mb-4">
                     Request Received
                   </div>
-                  <h3 className="text-2xl font-tight font-black uppercase text-white mb-4">
+                  <h3 className="text-2xl font-tight font-black uppercase text-black mb-4">
                     Submission Acknowledged
                   </h3>
-                  <p className="text-white/40 text-sm font-grotesk">
+                  <p className="text-black/40 text-sm font-grotesk">
                     Our team will review your inquiry and respond via secure channel within 48–72 hours. Only qualified government and institutional partners will receive a response.
                   </p>
-                  <div className="mt-8 font-mono text-[10px] text-white/20 tracking-widest uppercase">
+                  <div className="mt-8 font-mono text-[10px] text-black/20 tracking-widest uppercase">
                     CHAOS-REQ-{Math.random().toString(36).slice(2, 10).toUpperCase()}
                   </div>
                 </div>
@@ -103,77 +103,77 @@ export default function ContactPage() {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-mono text-[10px] text-white/30 tracking-widest uppercase mb-2">
+                      <label className="block font-mono text-[10px] text-black/30 tracking-widest uppercase mb-2">
                         First Name *
                       </label>
                       <input
                         type="text"
                         required
-                        className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
+                        className="w-full bg-[#FFFFFF] border border-black/[0.08] text-black text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-black/20"
                         placeholder="First name"
                       />
                     </div>
                     <div>
-                      <label className="block font-mono text-[10px] text-white/30 tracking-widest uppercase mb-2">
+                      <label className="block font-mono text-[10px] text-black/30 tracking-widest uppercase mb-2">
                         Last Name *
                       </label>
                       <input
                         type="text"
                         required
-                        className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
+                        className="w-full bg-[#FFFFFF] border border-black/[0.08] text-black text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-black/20"
                         placeholder="Last name"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block font-mono text-[10px] text-white/30 tracking-widest uppercase mb-2">
+                    <label className="block font-mono text-[10px] text-black/30 tracking-widest uppercase mb-2">
                       Official Email Address *
                     </label>
                     <input
                       type="email"
                       required
-                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
+                      className="w-full bg-[#FFFFFF] border border-black/[0.08] text-black text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-black/20"
                       placeholder="name@organization.gov"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-mono text-[10px] text-white/30 tracking-widest uppercase mb-2">
+                    <label className="block font-mono text-[10px] text-black/30 tracking-widest uppercase mb-2">
                       Organization *
                     </label>
                     <input
                       type="text"
                       required
-                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
+                      className="w-full bg-[#FFFFFF] border border-black/[0.08] text-black text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-black/20"
                       placeholder="Ministry of Defence / Agency name"
                     />
                   </div>
 
                   <div>
-                    <label className="block font-mono text-[10px] text-white/30 tracking-widest uppercase mb-2">
+                    <label className="block font-mono text-[10px] text-black/30 tracking-widest uppercase mb-2">
                       Nature of Inquiry *
                     </label>
                     <select
                       required
                       value={type}
                       onChange={(e) => setType(e.target.value)}
-                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk appearance-none"
+                      className="w-full bg-[#FFFFFF] border border-black/[0.08] text-black text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk appearance-none"
                     >
-                      <option value="" className="bg-[#100D1F]">Select inquiry type</option>
+                      <option value="" className="bg-[#FFFFFF]">Select inquiry type</option>
                       {INQUIRY_TYPES.map((t) => (
-                        <option key={t} value={t} className="bg-[#100D1F]">{t}</option>
+                        <option key={t} value={t} className="bg-[#FFFFFF]">{t}</option>
                       ))}
                     </select>
                   </div>
 
                   <div>
-                    <label className="block font-mono text-[10px] text-white/30 tracking-widest uppercase mb-2">
+                    <label className="block font-mono text-[10px] text-black/30 tracking-widest uppercase mb-2">
                       Mission Context
                     </label>
                     <textarea
                       rows={5}
-                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk resize-none placeholder:text-white/20"
+                      className="w-full bg-[#FFFFFF] border border-black/[0.08] text-black text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk resize-none placeholder:text-black/20"
                       placeholder="Describe your operational requirements, deployment environment, and timeline."
                     />
                   </div>
@@ -186,7 +186,7 @@ export default function ContactPage() {
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </button>
 
-                  <p className="text-center font-mono text-[9px] text-white/20 tracking-widest uppercase">
+                  <p className="text-center font-mono text-[9px] text-black/20 tracking-widest uppercase">
                     All submissions transmitted over TLS 1.3. No third-party data processing.
                   </p>
                 </form>
@@ -209,13 +209,13 @@ export default function ContactPage() {
                   {SECURITY_FEATURES.map((feat, i) => {
                     const Icon = feat.icon;
                     return (
-                      <div key={i} className="flex items-start gap-4 p-4 border border-white/[0.06] bg-[#100D1F]/50">
+                      <div key={i} className="flex items-start gap-4 p-4 border border-black/[0.06] bg-[#FFFFFF]/50">
                         <div className="w-8 h-8 flex items-center justify-center border border-[#8B5CF6]/20 text-[#8B5CF6] flex-shrink-0">
                           <Icon size={14} />
                         </div>
                         <div>
-                          <div className="text-sm font-tight font-bold uppercase text-white mb-1">{feat.label}</div>
-                          <div className="text-xs text-white/30 font-grotesk">{feat.desc}</div>
+                          <div className="text-sm font-tight font-bold uppercase text-black mb-1">{feat.label}</div>
+                          <div className="text-xs text-black/30 font-grotesk">{feat.desc}</div>
                         </div>
                       </div>
                     );
@@ -224,7 +224,7 @@ export default function ContactPage() {
               </div>
 
               {/* Response times */}
-              <div className="border border-white/[0.06] p-6">
+              <div className="border border-black/[0.06] p-6">
                 <div className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase mb-6">
                   Response Protocol
                 </div>
@@ -236,7 +236,7 @@ export default function ContactPage() {
                     { type: "Demonstration Access", time: "Subject to clearance" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center justify-between">
-                      <span className="text-xs text-white/30 font-grotesk">{item.type}</span>
+                      <span className="text-xs text-black/30 font-grotesk">{item.type}</span>
                       <span className="font-mono text-[10px] text-[#8B5CF6]/50 tracking-wider">{item.time}</span>
                     </div>
                   ))}
@@ -244,11 +244,11 @@ export default function ContactPage() {
               </div>
 
               {/* Direct contact */}
-              <div className="border border-white/[0.06] p-6">
+              <div className="border border-black/[0.06] p-6">
                 <div className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase mb-4">
                   Direct Contact
                 </div>
-                <p className="text-xs text-white/30 font-grotesk mb-4">
+                <p className="text-xs text-black/30 font-grotesk mb-4">
                   For urgent national security inquiries, contact our secure operations desk directly.
                 </p>
                 <a
@@ -260,7 +260,7 @@ export default function ContactPage() {
               </div>
 
               {/* Classification */}
-              <div className="font-mono text-[9px] text-white/15 tracking-widest uppercase leading-relaxed">
+              <div className="font-mono text-[9px] text-black/15 tracking-widest uppercase leading-relaxed">
                 CHAOS-ENGAGE // RESTRICTED ACCESS<br />
                 ENGAGEMENTS REQUIRE VERIFIED INSTITUTIONAL AUTHORIZATION<br />
                 REF: CHAOS-CONTACT-PROTO-v2.4

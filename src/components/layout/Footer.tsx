@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#040608",
+        background: "#F8FAFC",
         position: "relative",
         overflow: "hidden",
       }}
@@ -69,7 +69,7 @@ export default function Footer() {
         {/* System status bar */}
         <div
           className="flex flex-wrap items-center gap-6 mb-12 pb-6"
-          style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}
+          style={{ borderBottom: "1px solid rgba(15,23,42,0.07)" }}
         >
           <div className="flex items-center gap-3">
             <div
@@ -82,7 +82,7 @@ export default function Footer() {
           </div>
           {SYSTEM_METRICS.map((m) => (
             <div key={m.label} className="terminal-line flex items-center gap-2" style={{ fontSize: 9 }}>
-              <span style={{ color: "rgba(255,255,255,0.18)" }}>{m.label}:</span>
+              <span style={{ color: "rgba(15,23,42,0.35)" }}>{m.label}:</span>
               <span style={{ color: m.color }}>{m.value}</span>
             </div>
           ))}
@@ -113,8 +113,7 @@ export default function Footer() {
                   fontSize: 14,
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  color: "#fff",
-                  textShadow: "0 0 20px rgba(255,255,255,0.1)",
+                  color: "#0F172A",
                 }}>
                   CHAOS
                 </div>
@@ -129,7 +128,7 @@ export default function Footer() {
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "0.82rem",
                 lineHeight: 1.8,
-                color: "rgba(255,255,255,0.28)",
+                color: "rgba(15,23,42,0.5)",
                 marginBottom: "1.5rem",
                 maxWidth: 280,
               }}
@@ -164,14 +163,14 @@ export default function Footer() {
                       textDecoration: "none",
                       fontFamily: "'Inter', sans-serif",
                       fontSize: "0.82rem",
-                      color: "rgba(255,255,255,0.28)",
+                      color: "rgba(15,23,42,0.5)",
                       transition: "color 0.2s",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "rgba(139,92,246,0.75)";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "rgba(124,58,237,0.85)";
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.28)";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "rgba(15,23,42,0.5)";
                     }}
                   >
                     {link.label}
@@ -185,10 +184,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pt-6"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}
+          style={{ borderTop: "1px solid rgba(15,23,42,0.07)" }}
         >
           <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8">
-            <p className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.15)", letterSpacing: "0.1em" }}>
+            <p className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.35)", letterSpacing: "0.1em" }}>
               © 2025 CHAOS DEFENCE AI RESEARCH PVT. LTD. ALL RIGHTS RESERVED.
             </p>
             <div style={{ display: "flex", gap: "1.5rem" }}>
@@ -200,19 +199,19 @@ export default function Footer() {
                     textDecoration: "none",
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: 9,
-                    color: "rgba(255,255,255,0.18)",
+                    color: "rgba(15,23,42,0.35)",
                     letterSpacing: "0.1em",
                     transition: "color 0.2s",
                   }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(139,92,246,0.5)"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.18)"; }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(124,58,237,0.75)"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(15,23,42,0.35)"; }}
                 >
                   {item}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.1)", letterSpacing: "0.12em" }}>
+          <div className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.3)", letterSpacing: "0.12em" }}>
             CHAOS-SANJAY-v2.4.1 // SOVEREIGN DEPLOYMENT // {new Date().getFullYear()}
           </div>
         </div>

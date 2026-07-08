@@ -84,7 +84,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
           background: hovered
             ? "rgba(14, 22, 32, 0.98)"
             : "rgba(7, 10, 16, 0.95)",
-          border: `1px solid ${hovered ? cap.color + "30" : "rgba(255,255,255,0.06)"}`,
+          border: `1px solid ${hovered ? cap.color + "30" : "rgba(15,23,42,0.06)"}`,
           padding: "2rem",
           cursor: "default",
           transition: "background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease",
@@ -137,7 +137,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
 
         {/* Header row */}
         <div className="flex items-center justify-between mb-5">
-          <div className="terminal-line" style={{ color: "rgba(255,255,255,0.16)", fontSize: 10 }}>
+          <div className="terminal-line" style={{ color: "rgba(15,23,42,0.16)", fontSize: 10 }}>
             {cap.code}
           </div>
           <span
@@ -161,7 +161,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
             fontSize: "1.05rem",
             textTransform: "uppercase",
             letterSpacing: "0.04em",
-            color: hovered ? "#fff" : "rgba(255,255,255,0.9)",
+            color: hovered ? "#fff" : "rgba(15,23,42,0.9)",
             marginBottom: "0.75rem",
             transition: "color 0.3s",
           }}
@@ -175,7 +175,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
             fontFamily: "'Inter', sans-serif",
             fontSize: "0.825rem",
             lineHeight: 1.75,
-            color: "rgba(255,255,255,0.33)",
+            color: "rgba(15,23,42,0.33)",
             marginBottom: "1.25rem",
           }}
         >
@@ -185,7 +185,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
         {/* Progress bar */}
         <div className="mb-4">
           <div className="flex justify-between items-center mb-1.5">
-            <span className="terminal-line" style={{ fontSize: 8, color: "rgba(255,255,255,0.2)" }}>
+            <span className="terminal-line" style={{ fontSize: 8, color: "rgba(15,23,42,0.2)" }}>
               CAPABILITY READINESS
             </span>
             <span className="terminal-line" style={{ fontSize: 8, color: cap.color, opacity: 0.7 }}>
@@ -195,7 +195,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
           <div
             style={{
               height: 2,
-              background: "rgba(255,255,255,0.05)",
+              background: "rgba(15,23,42,0.05)",
               position: "relative",
               overflow: "hidden",
             }}
@@ -244,7 +244,7 @@ export default function Capabilities() {
     <section
       ref={ref}
       id="capabilities"
-      style={{ background: "#07060F", position: "relative", overflow: "hidden" }}
+      style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}
     >
       {/* Mesh gradient background */}
       <div className="absolute inset-0 bg-grid" style={{ opacity: 0.3 }} />
@@ -301,14 +301,14 @@ export default function Capabilities() {
               >
                 Contested
               </span>
-              <span style={{ color: "rgba(255,255,255,0.65)", display: "block" }}>Environments</span>
+              <span style={{ color: "rgba(15,23,42,0.65)", display: "block" }}>Environments</span>
             </h2>
             <p
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "0.9rem",
                 lineHeight: 1.8,
-                color: "rgba(255,255,255,0.35)",
+                color: "rgba(15,23,42,0.35)",
                 maxWidth: 420,
               }}
             >

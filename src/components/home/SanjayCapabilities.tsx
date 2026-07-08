@@ -100,7 +100,7 @@ export default function SanjayCapabilities() {
     <section
       ref={ref}
       style={{
-        background: "linear-gradient(180deg, #100D1F 0%, #050709 100%)",
+        background: "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 100%)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -149,7 +149,7 @@ export default function SanjayCapabilities() {
               fontFamily: "'Inter', sans-serif",
               fontSize: "1.125rem",
               lineHeight: 1.7,
-              color: "rgba(255,255,255,0.5)",
+              color: "rgba(15,23,42,0.5)",
               maxWidth: "48rem",
               margin: "0 auto",
             }}
@@ -170,8 +170,8 @@ export default function SanjayCapabilities() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 style={{
-                  background: "rgba(7,6,15,0.6)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  background: "rgba(255,255,255,0.6)",
+                  border: "1px solid rgba(15,23,42,0.08)",
                   padding: "2rem",
                   position: "relative",
                   overflow: "hidden",
@@ -220,7 +220,7 @@ export default function SanjayCapabilities() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "0.875rem",
                     lineHeight: 1.7,
-                    color: "rgba(255,255,255,0.45)",
+                    color: "rgba(15,23,42,0.45)",
                   }}
                 >
                   {capability.description}
