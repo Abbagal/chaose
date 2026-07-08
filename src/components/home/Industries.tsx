@@ -125,7 +125,7 @@ export default function Industries() {
                 textTransform: "uppercase",
               }}
             >
-              <span style={{ color: "#fff", display: "block" }}>National</span>
+              <span style={{ color: "#0F172A", display: "block" }}>National</span>
               <span
                 style={{
                   display: "block",
@@ -220,7 +220,7 @@ export default function Industries() {
                     fontSize: "1rem",
                     textTransform: "uppercase",
                     letterSpacing: "0.04em",
-                    color: "#fff",
+                    color: "#0F172A",
                     marginBottom: "0.25rem",
                   }}
                 >

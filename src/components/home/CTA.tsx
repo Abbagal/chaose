@@ -138,7 +138,7 @@ export default function CTA() {
               marginBottom: "1.5rem",
             }}
           >
-            <span style={{ color: "#fff" }}>Build The Future Of</span>
+            <span style={{ color: "#0F172A" }}>Build The Future Of</span>
             <br />
             <span
               style={{
@@ -248,7 +248,7 @@ export default function CTA() {
                 >
                   {p.label}
                 </div>
-                <p className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.25)", lineHeight: 1.6 }}>
+                <p className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.25)", lineHeight: 1.6 }}>
                   {p.desc}
                 </p>
               </motion.div>

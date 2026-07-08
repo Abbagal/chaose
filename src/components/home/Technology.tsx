@@ -101,7 +101,7 @@ function TRLBar({ trl, color, animate }: { trl: number; color: string; animate: 
             height: 12,
             background: i < trl
               ? `linear-gradient(to top, ${color}, ${color}90)`
-              : "rgba(15,23,42,0.08)",
+              : "rgba(255,255,255,0.08)",
             transformOrigin: "bottom",
             boxShadow: i < trl ? `0 0 4px ${color}60` : "none",
           }}
@@ -172,7 +172,7 @@ export default function Technology() {
                 textTransform: "uppercase",
               }}
             >
-              <span style={{ color: "#fff", display: "block" }}>Deep Research.</span>
+              <span style={{ color: "#0F172A", display: "block" }}>Deep Research.</span>
               <span
                 style={{
                   display: "block",
@@ -229,7 +229,7 @@ export default function Technology() {
               onMouseEnter={() => setActive(i)}
               onMouseLeave={() => setActive(null)}
               style={{
-                background: active === i ? "rgba(255,255,255,0.99)" : "rgba(6,9,14,0.99)",
+                background: active === i ? "rgba(14,22,32,0.99)" : "rgba(6,9,14,0.99)",
                 padding: "1.75rem",
                 cursor: "default",
                 transition: "background 0.25s, box-shadow 0.25s, transform 0.2s",
@@ -268,7 +268,7 @@ export default function Technology() {
 
               {/* ID + short */}
               <div className="flex items-center justify-between mb-4">
-                <span className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.16)" }}>
+                <span className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.16)" }}>
                   {tech.id}
                 </span>
                 <span
@@ -307,7 +307,7 @@ export default function Technology() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "0.8rem",
                   lineHeight: 1.7,
-                  color: "rgba(15,23,42,0.28)",
+                  color: "rgba(255,255,255,0.28)",
                   marginBottom: "1rem",
                 }}
               >
@@ -331,7 +331,7 @@ export default function Technology() {
                   >
                     <div
                       className="grid grid-cols-2 gap-1 pt-3"
-                      style={{ borderTop: "1px solid rgba(15,23,42,0.05)" }}
+                      style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
                     >
                       {tech.sub.map((s, j) => (
                         <motion.div

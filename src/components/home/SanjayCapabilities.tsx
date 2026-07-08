@@ -138,7 +138,7 @@ export default function SanjayCapabilities() {
               fontSize: "clamp(2.5rem, 6vw, 5rem)",
               lineHeight: 1,
               letterSpacing: "-0.02em",
-              color: "#fff",
+              color: "#0F172A",
               marginBottom: "1.5rem",
             }}
           >
@@ -206,7 +206,7 @@ export default function SanjayCapabilities() {
                     fontFamily: "'Sora', sans-serif",
                     fontWeight: 700,
                     fontSize: "1.125rem",
-                    color: "#fff",
+                    color: "#0F172A",
                     marginBottom: "0.75rem",
                     lineHeight: 1.3,
                   }}
