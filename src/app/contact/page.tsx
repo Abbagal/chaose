@@ -31,12 +31,12 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-[#05070A] min-h-screen pt-20">
+    <div className="bg-[#07060F] min-h-screen pt-20">
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(125,249,255,0.06),transparent)]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7DF9FF]/20 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(139,92,246,0.06),transparent)]" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B5CF6]/20 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -45,13 +45,13 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="h-px w-12 bg-[#7DF9FF]/40" />
-              <span className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase">Engage Chaos</span>
+              <div className="h-px w-12 bg-[#8B5CF6]/40" />
+              <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">Engage Chaos</span>
             </div>
             <h1 className="text-5xl lg:text-8xl font-tight font-black uppercase leading-[0.9] tracking-tight mb-8">
               <span className="text-white">Build The Future</span>
               <br />
-              <span className="text-[#7DF9FF]">Of Operational</span>
+              <span className="gradient-text-cyan">Of Operational</span>
               <br />
               <span className="text-white">Intelligence</span>
             </h1>
@@ -74,11 +74,11 @@ export default function ContactPage() {
               className="lg:col-span-3"
             >
               {submitted ? (
-                <div className="border border-[#00FFB3]/20 bg-[#00FFB3]/[0.04] p-12 text-center">
-                  <div className="w-12 h-12 border-2 border-[#00FFB3]/40 flex items-center justify-center mx-auto mb-6">
-                    <div className="w-4 h-4 bg-[#00FFB3]" />
+                <div className="border border-[#22D3EE]/20 bg-[#22D3EE]/[0.04] p-12 text-center">
+                  <div className="w-12 h-12 border-2 border-[#22D3EE]/40 flex items-center justify-center mx-auto mb-6">
+                    <div className="w-4 h-4 bg-[#22D3EE]" />
                   </div>
-                  <div className="font-mono text-[11px] text-[#00FFB3]/60 tracking-widest uppercase mb-4">
+                  <div className="font-mono text-[11px] text-[#22D3EE]/60 tracking-widest uppercase mb-4">
                     Request Received
                   </div>
                   <h3 className="text-2xl font-tight font-black uppercase text-white mb-4">
@@ -94,9 +94,9 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Classified notice */}
-                  <div className="border border-[#FF6B35]/20 bg-[#FF6B35]/[0.04] p-4 flex items-start gap-3">
-                    <Lock size={14} className="text-[#FF6B35]/60 mt-0.5 flex-shrink-0" />
-                    <p className="font-mono text-[10px] text-[#FF6B35]/50 tracking-wider leading-relaxed">
+                  <div className="border border-[#F59E0B]/20 bg-[#F59E0B]/[0.04] p-4 flex items-start gap-3">
+                    <Lock size={14} className="text-[#F59E0B]/60 mt-0.5 flex-shrink-0" />
+                    <p className="font-mono text-[10px] text-[#F59E0B]/50 tracking-wider leading-relaxed">
                       This form is for qualified government and institutional inquiries only. Submissions are logged and reviewed. False representations may be reported to relevant authorities.
                     </p>
                   </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                       <input
                         type="text"
                         required
-                        className="w-full bg-[#0B0F14] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#7DF9FF]/30 transition-colors font-grotesk placeholder:text-white/20"
+                        className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
                         placeholder="First name"
                       />
                     </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
                       <input
                         type="text"
                         required
-                        className="w-full bg-[#0B0F14] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#7DF9FF]/30 transition-colors font-grotesk placeholder:text-white/20"
+                        className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
                         placeholder="Last name"
                       />
                     </div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                     <input
                       type="email"
                       required
-                      className="w-full bg-[#0B0F14] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#7DF9FF]/30 transition-colors font-grotesk placeholder:text-white/20"
+                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
                       placeholder="name@organization.gov"
                     />
                   </div>
@@ -145,7 +145,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       required
-                      className="w-full bg-[#0B0F14] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#7DF9FF]/30 transition-colors font-grotesk placeholder:text-white/20"
+                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk placeholder:text-white/20"
                       placeholder="Ministry of Defence / Agency name"
                     />
                   </div>
@@ -158,11 +158,11 @@ export default function ContactPage() {
                       required
                       value={type}
                       onChange={(e) => setType(e.target.value)}
-                      className="w-full bg-[#0B0F14] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#7DF9FF]/30 transition-colors font-grotesk appearance-none"
+                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk appearance-none"
                     >
-                      <option value="" className="bg-[#0B0F14]">Select inquiry type</option>
+                      <option value="" className="bg-[#100D1F]">Select inquiry type</option>
                       {INQUIRY_TYPES.map((t) => (
-                        <option key={t} value={t} className="bg-[#0B0F14]">{t}</option>
+                        <option key={t} value={t} className="bg-[#100D1F]">{t}</option>
                       ))}
                     </select>
                   </div>
@@ -173,14 +173,14 @@ export default function ContactPage() {
                     </label>
                     <textarea
                       rows={5}
-                      className="w-full bg-[#0B0F14] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#7DF9FF]/30 transition-colors font-grotesk resize-none placeholder:text-white/20"
+                      className="w-full bg-[#100D1F] border border-white/[0.08] text-white text-sm p-3 focus:outline-none focus:border-[#8B5CF6]/30 transition-colors font-grotesk resize-none placeholder:text-white/20"
                       placeholder="Describe your operational requirements, deployment environment, and timeline."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="group w-full flex items-center justify-center gap-3 px-8 py-4 bg-[#7DF9FF] text-[#05070A] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors duration-200"
+                    className="group w-full flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#8B5CF6] to-[#22D3EE] text-[#07060F] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors duration-200"
                   >
                     Submit Secure Request
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -202,15 +202,15 @@ export default function ContactPage() {
             >
               {/* Security features */}
               <div>
-                <div className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase mb-6">
+                <div className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase mb-6">
                   Secure Channel
                 </div>
                 <div className="space-y-4">
                   {SECURITY_FEATURES.map((feat, i) => {
                     const Icon = feat.icon;
                     return (
-                      <div key={i} className="flex items-start gap-4 p-4 border border-white/[0.06] bg-[#0B0F14]/50">
-                        <div className="w-8 h-8 flex items-center justify-center border border-[#7DF9FF]/20 text-[#7DF9FF] flex-shrink-0">
+                      <div key={i} className="flex items-start gap-4 p-4 border border-white/[0.06] bg-[#100D1F]/50">
+                        <div className="w-8 h-8 flex items-center justify-center border border-[#8B5CF6]/20 text-[#8B5CF6] flex-shrink-0">
                           <Icon size={14} />
                         </div>
                         <div>
@@ -225,7 +225,7 @@ export default function ContactPage() {
 
               {/* Response times */}
               <div className="border border-white/[0.06] p-6">
-                <div className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase mb-6">
+                <div className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase mb-6">
                   Response Protocol
                 </div>
                 <div className="space-y-4">
@@ -237,7 +237,7 @@ export default function ContactPage() {
                   ].map((item, i) => (
                     <div key={i} className="flex items-center justify-between">
                       <span className="text-xs text-white/30 font-grotesk">{item.type}</span>
-                      <span className="font-mono text-[10px] text-[#7DF9FF]/50 tracking-wider">{item.time}</span>
+                      <span className="font-mono text-[10px] text-[#8B5CF6]/50 tracking-wider">{item.time}</span>
                     </div>
                   ))}
                 </div>
@@ -245,7 +245,7 @@ export default function ContactPage() {
 
               {/* Direct contact */}
               <div className="border border-white/[0.06] p-6">
-                <div className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase mb-4">
+                <div className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase mb-4">
                   Direct Contact
                 </div>
                 <p className="text-xs text-white/30 font-grotesk mb-4">
@@ -253,7 +253,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   href="mailto:ops@chaosdefenceai.in"
-                  className="font-mono text-[11px] text-[#7DF9FF]/60 tracking-wider hover:text-[#7DF9FF] transition-colors"
+                  className="font-mono text-[11px] text-[#8B5CF6]/60 tracking-wider hover:text-[#8B5CF6] transition-colors"
                 >
                   ops@chaosdefenceai.in
                 </a>

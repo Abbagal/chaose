@@ -18,7 +18,7 @@ interface Props {
   interactive?: boolean;
 }
 
-const COLORS = ["#7DF9FF", "#00FFB3", "#7DF9FF", "#ffffff", "#7DF9FF"];
+const COLORS = ["#8B5CF6", "#22D3EE", "#8B5CF6", "#ffffff", "#8B5CF6"];
 
 export default function ParticleCanvas({ className = "", count = 120, interactive = true }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -102,7 +102,7 @@ export default function ParticleCanvas({ className = "", count = 120, interactiv
           if (dist < 80) {
             ctx.save();
             ctx.globalAlpha = (1 - dist / 80) * 0.12;
-            ctx.strokeStyle = "#7DF9FF";
+            ctx.strokeStyle = "#8B5CF6";
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);

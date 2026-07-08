@@ -47,9 +47,9 @@ function BootLine({ text, delay, highlight }: { text: string; delay: number; hig
     <div
       className="terminal-line"
       style={{
-        color: highlight ? "#7DF9FF" : undefined,
+        color: highlight ? "#8B5CF6" : undefined,
         fontWeight: highlight ? 700 : undefined,
-        textShadow: highlight ? "0 0 12px rgba(125,249,255,0.6)" : undefined,
+        textShadow: highlight ? "0 0 12px rgba(139,92,246,0.6)" : undefined,
       }}
     >
       <span className="prompt">›</span>
@@ -61,11 +61,11 @@ function BootLine({ text, delay, highlight }: { text: string; delay: number; hig
 
 /* ── live status row ────────────────────────────────────────────── */
 const STATUS_ITEMS = [
-  { label: "NETWORK", value: "SECURE", color: "#00FFB3" },
-  { label: "NODES", value: "4,847", color: "#7DF9FF" },
-  { label: "LATENCY", value: "74ms", color: "#7DF9FF" },
-  { label: "UPTIME", value: "99.99%", color: "#00FFB3" },
-  { label: "THREAT", value: "AMBER", color: "#FF6B35" },
+  { label: "NETWORK", value: "SECURE", color: "#22D3EE" },
+  { label: "NODES", value: "4,847", color: "#8B5CF6" },
+  { label: "LATENCY", value: "74ms", color: "#8B5CF6" },
+  { label: "UPTIME", value: "99.99%", color: "#22D3EE" },
+  { label: "THREAT", value: "AMBER", color: "#F59E0B" },
 ];
 
 /* ── stats ──────────────────────────────────────────────────────── */
@@ -86,10 +86,10 @@ const FEED_ITEMS = [
 ];
 
 const statusColor: Record<string, string> = {
-  ACTIVE: "#7DF9FF",
-  PROCESSING: "#00FFB3",
-  VERIFIED: "#00FFB3",
-  ALERT: "#FF6B35",
+  ACTIVE: "#8B5CF6",
+  PROCESSING: "#22D3EE",
+  VERIFIED: "#22D3EE",
+  ALERT: "#F59E0B",
 };
 
 export default function Hero() {
@@ -127,7 +127,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       className="relative w-full overflow-hidden"
-      style={{ minHeight: "100svh", background: "#05070A" }}
+      style={{ minHeight: "100svh", background: "#07060F" }}
     >
       {/* ── particle canvas background ─── */}
       <div className="absolute inset-0 z-0">
@@ -143,7 +143,7 @@ export default function Hero() {
         style={{
           width: 600, height: 600,
           top: "10%", right: "15%",
-          background: "radial-gradient(circle, rgba(125,249,255,0.12) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%)",
           zIndex: 2,
         }}
       />
@@ -152,7 +152,7 @@ export default function Hero() {
         style={{
           width: 400, height: 400,
           bottom: "20%", left: "5%",
-          background: "radial-gradient(circle, rgba(0,255,179,0.08) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(34,211,238,0.08) 0%, transparent 70%)",
           zIndex: 2,
         }}
       />
@@ -173,13 +173,13 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none z-[4]"
         style={{
           background:
-            "linear-gradient(90deg, #05070A 0%, #05070A 35%, rgba(5,7,10,0.88) 50%, rgba(5,7,10,0.35) 68%, transparent 100%)",
+            "linear-gradient(90deg, #07060F 0%, #07060F 35%, rgba(7,6,15,0.88) 50%, rgba(7,6,15,0.35) 68%, transparent 100%)",
         }}
       />
       {/* ── bottom fade ─── */}
       <div
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4]"
-        style={{ height: 220, background: "linear-gradient(to top, #05070A, transparent)" }}
+        style={{ height: 220, background: "linear-gradient(to top, #07060F, transparent)" }}
       />
 
       {/* ── scan line ─── */}
@@ -190,7 +190,7 @@ export default function Hero() {
         className="absolute top-[72px] left-0 right-0 flex items-center justify-between px-6 lg:px-8 py-2 z-20"
         style={{
           borderBottom: "1px solid rgba(255,255,255,0.05)",
-          background: "rgba(5,7,10,0.6)",
+          background: "rgba(7,6,15,0.6)",
           backdropFilter: "blur(12px)",
         }}
       >
@@ -228,16 +228,16 @@ export default function Hero() {
             className="mb-8 p-4 glass-panel"
             style={{
               background: "rgba(5,10,18,0.75)",
-              border: "1px solid rgba(125,249,255,0.12)",
+              border: "1px solid rgba(139,92,246,0.12)",
               backdropFilter: "blur(16px)",
-              boxShadow: "0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(125,249,255,0.06)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(139,92,246,0.06)",
             }}
           >
             {/* Terminal header bar */}
             <div className="flex items-center gap-2 mb-3 pb-2" style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-              <div className="w-2 h-2 rounded-full" style={{ background: "#FF6B35", opacity: 0.7 }} />
-              <div className="w-2 h-2 rounded-full" style={{ background: "#7DF9FF", opacity: 0.7 }} />
-              <div className="w-2 h-2 rounded-full" style={{ background: "#00FFB3", opacity: 0.7 }} />
+              <div className="w-2 h-2 rounded-full" style={{ background: "#F59E0B", opacity: 0.7 }} />
+              <div className="w-2 h-2 rounded-full" style={{ background: "#8B5CF6", opacity: 0.7 }} />
+              <div className="w-2 h-2 rounded-full" style={{ background: "#22D3EE", opacity: 0.7 }} />
               <span className="terminal-line ml-2 text-[9px]" style={{ color: "rgba(255,255,255,0.2)" }}>CHAOS_SYS_INIT</span>
             </div>
             {BOOT_LINES.map((l, i) => (
@@ -261,7 +261,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0, rotateX: 0 }}
             transition={{ delay: 2.8, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             style={{
-              fontFamily: "'Inter Tight', sans-serif",
+              fontFamily: "'Sora', sans-serif",
               fontSize: "clamp(3rem, 7vw, 6.5rem)",
               fontWeight: 900,
               lineHeight: 0.88,
@@ -276,14 +276,14 @@ export default function Hero() {
               className="glitch"
               style={{
                 display: "block",
-                background: "linear-gradient(135deg, #7DF9FF, #00FFB3, #7DF9FF)",
+                background: "linear-gradient(135deg, #8B5CF6, #22D3EE, #8B5CF6)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 backgroundSize: "200% 200%",
                 animation: "gradientShift 4s ease-in-out infinite, textGlitch 10s infinite",
                 textShadow: "none",
-                filter: "drop-shadow(0 0 30px rgba(125,249,255,0.4))",
+                filter: "drop-shadow(0 0 30px rgba(139,92,246,0.4))",
               }}
             >
               Superiority
@@ -308,7 +308,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 3.2, duration: 0.7 }}
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "1.1rem",
               lineHeight: 1.7,
               color: "rgba(255,255,255,0.4)",
@@ -361,10 +361,10 @@ export default function Hero() {
               >
                 <div
                   style={{
-                    fontFamily: "'Inter Tight', sans-serif",
+                    fontFamily: "'Sora', sans-serif",
                     fontWeight: 900,
                     fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
-                    background: "linear-gradient(135deg, #fff 50%, #7DF9FF 100%)",
+                    background: "linear-gradient(135deg, #fff 50%, #8B5CF6 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -403,7 +403,7 @@ export default function Hero() {
         <div
           className="p-4 glass-panel-strong"
           style={{
-            boxShadow: "0 16px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(125,249,255,0.06), inset 0 1px 0 rgba(125,249,255,0.08)",
+            boxShadow: "0 16px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.06), inset 0 1px 0 rgba(139,92,246,0.08)",
           }}
         >
           <div
@@ -427,9 +427,9 @@ export default function Hero() {
                 </div>
                 <div
                   className="terminal-line"
-                  style={{ color: statusColor[item.status] || "#7DF9FF", fontSize: 9 }}
+                  style={{ color: statusColor[item.status] || "#8B5CF6", fontSize: 9 }}
                 >
-                  {item.type} // {item.status}
+                  {item.type} {"//"} {item.status}
                 </div>
               </div>
               <div className="terminal-line" style={{ color: "rgba(255,255,255,0.2)", fontSize: 9 }}>
@@ -439,7 +439,7 @@ export default function Hero() {
           ))}
           <div
             className="terminal-line mt-3 pt-2"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.05)", color: "rgba(125,249,255,0.3)", fontSize: 9 }}
+            style={{ borderTop: "1px solid rgba(255,255,255,0.05)", color: "rgba(139,92,246,0.3)", fontSize: 9 }}
           >
             SANJAY-NET // 4,847 NODES // OPERATIONAL
           </div>
@@ -462,7 +462,7 @@ export default function Hero() {
           className="w-px"
           style={{
             height: 40,
-            background: "linear-gradient(to bottom, rgba(125,249,255,0.5), transparent)",
+            background: "linear-gradient(to bottom, rgba(139,92,246,0.5), transparent)",
           }}
         />
       </motion.div>

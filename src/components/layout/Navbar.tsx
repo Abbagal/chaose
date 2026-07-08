@@ -40,7 +40,7 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           transition: "background 0.4s, border-color 0.4s",
-          background: scrolled ? "rgba(5,7,10,0.97)" : "rgba(5,7,10,0.6)",
+          background: scrolled ? "rgba(7,6,15,0.97)" : "rgba(7,6,15,0.6)",
           borderBottom: scrolled ? "1px solid rgba(255,255,255,0.07)" : "1px solid transparent",
           backdropFilter: "blur(16px)",
         }}
@@ -56,7 +56,7 @@ export default function Navbar() {
               <div
                 style={{
                   position: "absolute", inset: 0,
-                  border: "1px solid rgba(125,249,255,0.4)",
+                  border: "1px solid rgba(139,92,246,0.4)",
                   transform: "rotate(45deg)",
                   transition: "border-color 0.3s",
                 }}
@@ -64,7 +64,7 @@ export default function Navbar() {
               <div
                 style={{
                   position: "absolute", inset: 6,
-                  background: "rgba(125,249,255,0.12)",
+                  background: "rgba(139,92,246,0.12)",
                   transform: "rotate(45deg)",
                 }}
               />
@@ -74,13 +74,13 @@ export default function Navbar() {
                   display: "flex", alignItems: "center", justifyContent: "center",
                 }}
               >
-                <div style={{ width: 5, height: 5, background: "#7DF9FF", borderRadius: "50%" }} />
+                <div style={{ width: 5, height: 5, background: "#8B5CF6", borderRadius: "50%" }} />
               </div>
             </div>
             <div>
               <div
                 style={{
-                  fontFamily: "'Inter Tight', sans-serif",
+                  fontFamily: "'Sora', sans-serif",
                   fontWeight: 900,
                   fontSize: 16,
                   letterSpacing: "0.2em",
@@ -93,7 +93,7 @@ export default function Navbar() {
               </div>
               <div
                 className="terminal-line"
-                style={{ fontSize: 8, color: "rgba(125,249,255,0.5)", marginTop: 2, letterSpacing: "0.2em" }}
+                style={{ fontSize: 8, color: "rgba(139,92,246,0.5)", marginTop: 2, letterSpacing: "0.2em" }}
               >
                 DEFENCE AI RESEARCH
               </div>
@@ -119,7 +119,7 @@ export default function Navbar() {
                   color: "rgba(255,255,255,0.5)",
                   transition: "color 0.2s",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#7DF9FF")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#8B5CF6")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
               >
                 {link.label}
@@ -128,9 +128,9 @@ export default function Navbar() {
                     style={{
                       fontSize: 7,
                       padding: "1px 5px",
-                      background: "rgba(125,249,255,0.1)",
-                      border: "1px solid rgba(125,249,255,0.2)",
-                      color: "rgba(125,249,255,0.6)",
+                      background: "rgba(139,92,246,0.1)",
+                      border: "1px solid rgba(139,92,246,0.2)",
+                      color: "rgba(139,92,246,0.6)",
                       letterSpacing: "0.15em",
                     }}
                   >
@@ -149,8 +149,8 @@ export default function Navbar() {
             </div>
             {/* Status dot */}
             <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#00FFB3", animation: "dataPulse 2s ease-in-out infinite" }} />
-              <span className="terminal-line" style={{ fontSize: 9, color: "rgba(0,255,179,0.5)", letterSpacing: "0.15em" }}>
+              <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#22D3EE", animation: "dataPulse 2s ease-in-out infinite" }} />
+              <span className="terminal-line" style={{ fontSize: 9, color: "rgba(34,211,238,0.5)", letterSpacing: "0.15em" }}>
                 ONLINE
               </span>
             </div>
@@ -205,7 +205,7 @@ export default function Navbar() {
               position: "fixed",
               top: 72, left: 0, right: 0,
               zIndex: 49,
-              background: "rgba(5,7,10,0.98)",
+              background: "rgba(7,6,15,0.98)",
               borderBottom: "1px solid rgba(255,255,255,0.07)",
               backdropFilter: "blur(16px)",
               padding: "2rem 1.5rem",

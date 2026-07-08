@@ -16,9 +16,9 @@ type Node = {
 type Edge = { a: number; b: number; progress: number; speed: number };
 
 const COLORS = {
-  hub: "#7DF9FF",
-  node: "#00FFB3",
-  sensor: "rgba(125,249,255,0.4)",
+  hub: "#8B5CF6",
+  node: "#22D3EE",
+  sensor: "rgba(139,92,246,0.4)",
 };
 
 export default function NetworkGraph({ width = 500, height = 400 }: { width?: number; height?: number }) {
@@ -122,7 +122,7 @@ export default function NetworkGraph({ width = 500, height = 400 }: { width?: nu
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = `rgba(125,249,255,${alpha})`;
+        ctx.strokeStyle = `rgba(139,92,246,${alpha})`;
         ctx.lineWidth = 0.8;
         ctx.stroke();
 
@@ -131,7 +131,7 @@ export default function NetworkGraph({ width = 500, height = 400 }: { width?: nu
         const py = a.y + dy * e.progress;
         ctx.beginPath();
         ctx.arc(px, py, 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = "#7DF9FF";
+        ctx.fillStyle = "#8B5CF6";
         ctx.globalAlpha = 0.8;
         ctx.fill();
         ctx.globalAlpha = 1;
@@ -145,7 +145,7 @@ export default function NetworkGraph({ width = 500, height = 400 }: { width?: nu
         // Glow ring
         if (n.type !== "sensor") {
           const glow = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 4 * pulseScale);
-          const glowColor = n.type === "hub" ? "125,249,255" : "0,255,179";
+          const glowColor = n.type === "hub" ? "139,92,246" : "34,211,238";
           glow.addColorStop(0, `rgba(${glowColor},0.25)`);
           glow.addColorStop(1, `rgba(${glowColor},0)`);
           ctx.beginPath();

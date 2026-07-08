@@ -32,11 +32,11 @@ const FEED = [
 ];
 
 const FEED_COLOR: Record<string, string> = {
-  FUSED: "#00FFB3",
-  PROCESSING: "#7DF9FF",
-  VERIFIED: "#00FFB3",
-  ACTIVE: "#7DF9FF",
-  ALERT: "#FF6B35",
+  FUSED: "#22D3EE",
+  PROCESSING: "#8B5CF6",
+  VERIFIED: "#22D3EE",
+  ACTIVE: "#8B5CF6",
+  ALERT: "#F59E0B",
 };
 
 export default function SANJAYPreview() {
@@ -46,14 +46,14 @@ export default function SANJAYPreview() {
   return (
     <section
       ref={ref}
-      style={{ background: "#0B0F14", position: "relative", overflow: "hidden" }}
+      style={{ background: "#100D1F", position: "relative", overflow: "hidden" }}
     >
       <div className="absolute inset-0 tactical-grid" style={{ opacity: 0.5 }} />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(125,249,255,0.04), transparent)",
+            "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(139,92,246,0.04), transparent)",
         }}
       />
 
@@ -77,7 +77,7 @@ export default function SANJAYPreview() {
             <div>
               <h2
                 style={{
-                  fontFamily: "'Inter Tight', sans-serif",
+                  fontFamily: "'Sora', sans-serif",
                   fontWeight: 900,
                   fontSize: "clamp(4rem, 10vw, 9rem)",
                   lineHeight: 0.85,
@@ -90,7 +90,7 @@ export default function SANJAYPreview() {
               </h2>
               <p
                 className="terminal-line mt-3"
-                style={{ color: "rgba(125,249,255,0.5)", letterSpacing: "0.25em" }}
+                style={{ color: "rgba(139,92,246,0.5)", letterSpacing: "0.25em" }}
               >
                 SOVEREIGN DECISION INTELLIGENCE PLATFORM
               </p>
@@ -115,23 +115,23 @@ export default function SANJAYPreview() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:col-span-4"
             style={{
-              background: "rgba(5,7,10,0.8)",
+              background: "rgba(7,6,15,0.8)",
               border: "1px solid rgba(255,255,255,0.07)",
               padding: "1.5rem",
             }}
           >
             {/* Corner chrome */}
             <div style={{ position: "relative", marginBottom: "1.5rem", paddingBottom: "1rem", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-              <div className="absolute top-0 left-0 w-4 h-4" style={{ borderTop: "1px solid rgba(125,249,255,0.4)", borderLeft: "1px solid rgba(125,249,255,0.4)" }} />
-              <div className="absolute top-0 right-0 w-4 h-4" style={{ borderTop: "1px solid rgba(125,249,255,0.4)", borderRight: "1px solid rgba(125,249,255,0.4)" }} />
-              <div className="terminal-line mb-2" style={{ color: "rgba(125,249,255,0.4)", fontSize: 9 }}>
+              <div className="absolute top-0 left-0 w-4 h-4" style={{ borderTop: "1px solid rgba(139,92,246,0.4)", borderLeft: "1px solid rgba(139,92,246,0.4)" }} />
+              <div className="absolute top-0 right-0 w-4 h-4" style={{ borderTop: "1px solid rgba(139,92,246,0.4)", borderRight: "1px solid rgba(139,92,246,0.4)" }} />
+              <div className="terminal-line mb-2" style={{ color: "rgba(139,92,246,0.4)", fontSize: 9 }}>
                 SANJAY // CAPABILITY MANIFEST
               </div>
             </div>
 
             <p
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontSize: "0.875rem",
                 lineHeight: 1.75,
                 color: "rgba(255,255,255,0.45)",
@@ -151,11 +151,11 @@ export default function SANJAYPreview() {
                   className="flex items-center gap-3 py-1.5"
                   style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}
                 >
-                  <div style={{ width: 4, height: 4, background: "#7DF9FF", flexShrink: 0, opacity: 0.7 }} />
-                  <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255,0.45)" }}>
+                  <div style={{ width: 4, height: 4, background: "#8B5CF6", flexShrink: 0, opacity: 0.7 }} />
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.8rem", color: "rgba(255,255,255,0.45)" }}>
                     {cap}
                   </span>
-                  <div className="ml-auto terminal-line" style={{ fontSize: 8, color: "rgba(0,255,179,0.35)" }}>
+                  <div className="ml-auto terminal-line" style={{ fontSize: 8, color: "rgba(34,211,238,0.35)" }}>
                     ACTIVE
                   </div>
                 </motion.div>
@@ -170,18 +170,18 @@ export default function SANJAYPreview() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 relative"
             style={{
-              background: "rgba(5,7,10,0.7)",
-              border: "1px solid rgba(125,249,255,0.1)",
+              background: "rgba(7,6,15,0.7)",
+              border: "1px solid rgba(139,92,246,0.1)",
               overflow: "hidden",
               minHeight: 380,
             }}
           >
             {/* Corner accents */}
             {[
-              { top: 0, left: 0, borderTop: "2px solid rgba(125,249,255,0.4)", borderLeft: "2px solid rgba(125,249,255,0.4)" },
-              { top: 0, right: 0, borderTop: "2px solid rgba(125,249,255,0.4)", borderRight: "2px solid rgba(125,249,255,0.4)" },
-              { bottom: 0, left: 0, borderBottom: "2px solid rgba(125,249,255,0.4)", borderLeft: "2px solid rgba(125,249,255,0.4)" },
-              { bottom: 0, right: 0, borderBottom: "2px solid rgba(125,249,255,0.4)", borderRight: "2px solid rgba(125,249,255,0.4)" },
+              { top: 0, left: 0, borderTop: "2px solid rgba(139,92,246,0.4)", borderLeft: "2px solid rgba(139,92,246,0.4)" },
+              { top: 0, right: 0, borderTop: "2px solid rgba(139,92,246,0.4)", borderRight: "2px solid rgba(139,92,246,0.4)" },
+              { bottom: 0, left: 0, borderBottom: "2px solid rgba(139,92,246,0.4)", borderLeft: "2px solid rgba(139,92,246,0.4)" },
+              { bottom: 0, right: 0, borderBottom: "2px solid rgba(139,92,246,0.4)", borderRight: "2px solid rgba(139,92,246,0.4)" },
             ].map((style, i) => (
               <div key={i} className="absolute w-5 h-5" style={style} />
             ))}
@@ -189,15 +189,15 @@ export default function SANJAYPreview() {
             {/* Label */}
             <div
               className="absolute top-4 left-4 z-10 terminal-line"
-              style={{ fontSize: 9, color: "rgba(125,249,255,0.5)" }}
+              style={{ fontSize: 9, color: "rgba(139,92,246,0.5)" }}
             >
               SANJAY-NET // INTELLIGENCE TOPOLOGY
             </div>
             <div
               className="absolute top-4 right-4 z-10 flex items-center gap-2"
             >
-              <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#00FFB3", animation: "dataPulse 1.5s ease-in-out infinite" }} />
-              <span className="terminal-line" style={{ fontSize: 9, color: "rgba(0,255,179,0.5)" }}>LIVE</span>
+              <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#22D3EE", animation: "dataPulse 1.5s ease-in-out infinite" }} />
+              <span className="terminal-line" style={{ fontSize: 9, color: "rgba(34,211,238,0.5)" }}>LIVE</span>
             </div>
 
             {/* Network canvas – full bleed */}
@@ -210,9 +210,9 @@ export default function SANJAYPreview() {
               className="absolute bottom-4 left-4 right-4 flex items-center justify-between"
             >
               {[
-                { color: "#7DF9FF", label: "HUB NODE" },
-                { color: "#00FFB3", label: "ACTIVE NODE" },
-                { color: "rgba(125,249,255,0.4)", label: "SENSOR NODE" },
+                { color: "#8B5CF6", label: "HUB NODE" },
+                { color: "#22D3EE", label: "ACTIVE NODE" },
+                { color: "rgba(139,92,246,0.4)", label: "SENSOR NODE" },
               ].map((l, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full" style={{ background: l.color }} />
@@ -230,12 +230,12 @@ export default function SANJAYPreview() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
               style={{
-                background: "rgba(5,7,10,0.9)",
-                border: "1px solid rgba(0,255,179,0.12)",
+                background: "rgba(7,6,15,0.9)",
+                border: "1px solid rgba(34,211,238,0.12)",
                 padding: "1rem",
               }}
             >
-              <div className="terminal-line mb-3 pb-2" style={{ fontSize: 9, color: "rgba(0,255,179,0.4)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+              <div className="terminal-line mb-3 pb-2" style={{ fontSize: 9, color: "rgba(34,211,238,0.4)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
                 THREAT RADAR // SECTOR-7 // LIVE
               </div>
               <div className="flex justify-center">
@@ -244,9 +244,9 @@ export default function SANJAYPreview() {
               {/* Blip legend */}
               <div className="flex justify-between mt-3 pt-2" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
                 {[
-                  { color: "#FF6B35", label: "HOSTILE" },
-                  { color: "#00FFB3", label: "FRIENDLY" },
-                  { color: "#7DF9FF", label: "UNKNOWN" },
+                  { color: "#F59E0B", label: "HOSTILE" },
+                  { color: "#22D3EE", label: "FRIENDLY" },
+                  { color: "#8B5CF6", label: "UNKNOWN" },
                 ].map((l, i) => (
                   <div key={i} className="flex items-center gap-1.5">
                     <div className="w-1.5 h-1.5 rounded-full" style={{ background: l.color }} />
@@ -262,13 +262,13 @@ export default function SANJAYPreview() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.45 }}
               style={{
-                background: "rgba(5,7,10,0.9)",
-                border: "1px solid rgba(125,249,255,0.08)",
+                background: "rgba(7,6,15,0.9)",
+                border: "1px solid rgba(139,92,246,0.08)",
                 padding: "1rem",
                 flex: 1,
               }}
             >
-              <div className="terminal-line mb-3 pb-2" style={{ fontSize: 9, color: "rgba(125,249,255,0.4)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+              <div className="terminal-line mb-3 pb-2" style={{ fontSize: 9, color: "rgba(139,92,246,0.4)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
                 INGESTION PIPELINE // REAL-TIME
               </div>
               {FEED.map((row, i) => (
@@ -298,7 +298,7 @@ export default function SANJAYPreview() {
                   </div>
                 </div>
               ))}
-              <div className="terminal-line mt-3" style={{ fontSize: 8, color: "rgba(125,249,255,0.25)", textAlign: "center" }}>
+              <div className="terminal-line mt-3" style={{ fontSize: 8, color: "rgba(139,92,246,0.25)", textAlign: "center" }}>
                 INGESTING 47 SOURCES // 2.3TB/hr
               </div>
             </motion.div>

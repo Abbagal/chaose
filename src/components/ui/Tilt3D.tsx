@@ -64,7 +64,7 @@ export default function Tilt3D({ children, className = "", style = {}, intensity
             position: "absolute",
             inset: 0,
             pointerEvents: "none",
-            background: `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(125,249,255,${glareOpacity}), transparent 60%)`,
+            background: `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(139,92,246,${glareOpacity}), transparent 60%)`,
             transition: "opacity 0.15s",
             borderRadius: "inherit",
           }}

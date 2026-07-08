@@ -27,11 +27,11 @@ const PLATFORM_CAPABILITIES = [
 ];
 
 const ARCHITECTURE = [
-  { layer: "Presentation", desc: "Unified operational interface — web, desktop, and API", color: "#7DF9FF" },
-  { layer: "Intelligence", desc: "AI reasoning, LLM copilots, decision support engines", color: "#00FFB3" },
-  { layer: "Fusion", desc: "Multi-INT ingestion, entity resolution, knowledge graph", color: "#7DF9FF" },
-  { layer: "Data", desc: "Secure classified data stores, encrypted at rest and in transit", color: "#FF6B35" },
-  { layer: "Infrastructure", desc: "Air-gapped sovereign compute, FIPS 140-2 compliant", color: "#00FFB3" },
+  { layer: "Presentation", desc: "Unified operational interface — web, desktop, and API", color: "#8B5CF6" },
+  { layer: "Intelligence", desc: "AI reasoning, LLM copilots, decision support engines", color: "#22D3EE" },
+  { layer: "Fusion", desc: "Multi-INT ingestion, entity resolution, knowledge graph", color: "#8B5CF6" },
+  { layer: "Data", desc: "Secure classified data stores, encrypted at rest and in transit", color: "#F59E0B" },
+  { layer: "Infrastructure", desc: "Air-gapped sovereign compute, FIPS 140-2 compliant", color: "#22D3EE" },
 ];
 
 function CapabilityCard({ cap, index }: { cap: typeof PLATFORM_CAPABILITIES[0]; index: number }) {
@@ -45,10 +45,10 @@ function CapabilityCard({ cap, index }: { cap: typeof PLATFORM_CAPABILITIES[0]; 
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="relative bg-[#0B0F14] border border-white/[0.06] p-6 group hover:border-[#7DF9FF]/20 transition-all duration-300"
+      className="relative bg-[#100D1F] border border-white/[0.06] p-6 group hover:border-[#8B5CF6]/20 transition-all duration-300"
     >
       <div className="flex items-start gap-4">
-        <div className="w-9 h-9 flex items-center justify-center border border-[#7DF9FF]/20 text-[#7DF9FF] flex-shrink-0 group-hover:border-[#7DF9FF]/50 transition-colors">
+        <div className="w-9 h-9 flex items-center justify-center border border-[#8B5CF6]/20 text-[#8B5CF6] flex-shrink-0 group-hover:border-[#8B5CF6]/50 transition-colors">
           <Icon size={16} />
         </div>
         <div>
@@ -70,11 +70,11 @@ export default function PlatformPage() {
   const archInView = useInView(archRef, { once: true });
 
   return (
-    <div className="bg-[#05070A] min-h-screen">
+    <div className="bg-[#07060F] min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 tactical-grid opacity-50" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(125,249,255,0.07),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(139,92,246,0.07),transparent)]" />
 
         {/* 3D command center — full background */}
         <div className="absolute inset-0 opacity-40">
@@ -82,7 +82,7 @@ export default function PlatformPage() {
         </div>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05070A]/60 via-[#05070A]/30 to-[#05070A]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#07060F]/60 via-[#07060F]/30 to-[#07060F]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24">
           {/* Badge */}
@@ -94,8 +94,8 @@ export default function PlatformPage() {
           >
             <span className="classified-badge">PLATFORM OVERVIEW</span>
             <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#00FFB3] animate-pulse" />
-              <span className="font-mono text-[10px] text-[#00FFB3]/60 tracking-[0.2em] uppercase">Live</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-[#22D3EE] animate-pulse" />
+              <span className="font-mono text-[10px] text-[#22D3EE]/60 tracking-[0.2em] uppercase">Live</span>
             </div>
           </motion.div>
 
@@ -105,10 +105,10 @@ export default function PlatformPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-8xl lg:text-[12rem] font-tight font-black uppercase leading-none tracking-tighter text-white mb-4">
+            <h1 className="text-8xl lg:text-[12rem] font-tight font-black uppercase leading-none tracking-tighter gradient-text-cyan mb-4">
               SANJAY
             </h1>
-            <div className="font-mono text-[12px] text-[#7DF9FF]/60 tracking-[0.4em] uppercase mb-8">
+            <div className="font-mono text-[12px] text-[#8B5CF6]/60 tracking-[0.4em] uppercase mb-8">
               Sovereign Decision Intelligence Platform
             </div>
             <div className="glow-line max-w-xl mb-8" />
@@ -118,7 +118,7 @@ export default function PlatformPage() {
             <div className="flex gap-4">
               <Link
                 href="/contact"
-                className="group flex items-center gap-3 px-8 py-4 bg-[#7DF9FF] text-[#05070A] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors"
+                className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#8B5CF6] to-[#22D3EE] text-[#07060F] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors"
               >
                 Request Access
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -135,18 +135,18 @@ export default function PlatformPage() {
       </section>
 
       {/* Capabilities grid */}
-      <section id="capabilities" className="relative py-24 bg-[#05070A]">
+      <section id="capabilities" className="relative py-24 bg-[#07060F]">
         <div className="absolute inset-0 bg-grid opacity-25" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#7DF9FF]/40" />
-            <span className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase">
+            <div className="h-px w-12 bg-[#8B5CF6]/40" />
+            <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">
               Platform Capabilities
             </span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white mb-12 leading-tight">
             11 Core Capabilities.<br />
-            <span className="text-[#7DF9FF]">One Unified System.</span>
+            <span className="gradient-text-cyan">One Unified System.</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -158,14 +158,14 @@ export default function PlatformPage() {
       </section>
 
       {/* Architecture */}
-      <section ref={archRef} className="relative py-24 bg-[#0B0F14]">
+      <section ref={archRef} className="relative py-24 bg-[#100D1F]">
         <div className="absolute inset-0 tactical-grid opacity-30" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7DF9FF]/15 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B5CF6]/15 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#7DF9FF]/40" />
-            <span className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase">
+            <div className="h-px w-12 bg-[#8B5CF6]/40" />
+            <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">
               Platform Architecture
             </span>
           </div>
@@ -173,7 +173,7 @@ export default function PlatformPage() {
             <div>
               <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white mb-8 leading-tight">
                 Sovereign.<br />
-                <span className="text-[#7DF9FF]">Air-Gapped.</span><br />
+                <span className="gradient-text-cyan">Air-Gapped.</span><br />
                 Mission-Ready.
               </h2>
               <p className="text-white/40 text-base leading-relaxed font-grotesk mb-8">
@@ -182,7 +182,7 @@ export default function PlatformPage() {
               <div className="space-y-1">
                 {["FIPS 140-2 compliant encryption", "Zero-trust network architecture", "Air-gapped deployment ready", "Hardware security module integration", "Multi-level security (MLS) support", "Common Criteria evaluation available"].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 py-2">
-                    <div className="w-1 h-1 bg-[#00FFB3] flex-shrink-0" />
+                    <div className="w-1 h-1 bg-[#22D3EE] flex-shrink-0" />
                     <span className="text-sm text-white/50 font-grotesk">{item}</span>
                   </div>
                 ))}
@@ -197,7 +197,7 @@ export default function PlatformPage() {
                   initial={{ opacity: 0, x: 30 }}
                   animate={archInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="flex items-center gap-4 p-4 border border-white/[0.06] bg-[#05070A]/50 group hover:border-white/10 transition-colors"
+                  className="flex items-center gap-4 p-4 border border-white/[0.06] bg-[#07060F]/50 group hover:border-white/10 transition-colors"
                 >
                   <div className="font-mono text-[10px] tracking-widest uppercase w-20 flex-shrink-0 text-right" style={{ color: `${layer.color}60` }}>
                     {layer.layer}
@@ -219,19 +219,19 @@ export default function PlatformPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 bg-[#05070A]">
+      <section className="relative py-24 bg-[#07060F]">
         <div className="absolute inset-0 bg-grid opacity-25" />
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <span className="classified-badge">RESTRICTED ACCESS</span>
           <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white mt-8 mb-6">
-            Ready to Deploy <span className="text-[#7DF9FF]">SANJAY</span>?
+            Ready to Deploy <span className="gradient-text-cyan">SANJAY</span>?
           </h2>
           <p className="text-white/40 text-base font-grotesk mb-8">
             SANJAY is available for sovereign deployment to qualified government and defence organizations. Contact our team for evaluation access.
           </p>
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-3 px-10 py-4 bg-[#7DF9FF] text-[#05070A] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors"
+            className="group inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#8B5CF6] to-[#22D3EE] text-[#07060F] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors"
           >
             Request Demonstration
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

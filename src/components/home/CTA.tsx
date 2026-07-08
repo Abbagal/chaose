@@ -31,13 +31,13 @@ export default function CTA() {
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, ease: "easeOut" }}
           style={{
-            fontFamily: "'Inter Tight', sans-serif",
+            fontFamily: "'Sora', sans-serif",
             fontWeight: 900,
             fontSize: "clamp(8rem, 20vw, 22rem)",
             letterSpacing: "-0.06em",
             textTransform: "uppercase",
             color: "transparent",
-            WebkitTextStroke: "1px rgba(125,249,255,0.035)",
+            WebkitTextStroke: "1px rgba(139,92,246,0.035)",
             userSelect: "none",
             lineHeight: 1,
           }}
@@ -53,7 +53,7 @@ export default function CTA() {
           top: "50%", left: "50%",
           transform: "translate(-50%,-50%)",
           width: 800, height: 800,
-          background: "radial-gradient(circle, rgba(125,249,255,0.06) 0%, rgba(0,255,179,0.02) 40%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(139,92,246,0.06) 0%, rgba(34,211,238,0.02) 40%, transparent 70%)",
         }}
       />
 
@@ -69,7 +69,7 @@ export default function CTA() {
               position: "absolute",
               inset: 0,
               borderRadius: "50%",
-              border: "1px solid rgba(125,249,255,0.06)",
+              border: "1px solid rgba(139,92,246,0.06)",
             }}
             animate={{
               scale: [1, 2.5, 2.5],
@@ -91,10 +91,10 @@ export default function CTA() {
       {/* Corner chrome */}
       <div className="absolute inset-8 pointer-events-none">
         {[
-          { top: 0, left: 0, borderTop: "1px solid rgba(125,249,255,0.1)", borderLeft: "1px solid rgba(125,249,255,0.1)", width: 56, height: 56 },
-          { top: 0, right: 0, borderTop: "1px solid rgba(125,249,255,0.1)", borderRight: "1px solid rgba(125,249,255,0.1)", width: 56, height: 56 },
-          { bottom: 0, left: 0, borderBottom: "1px solid rgba(125,249,255,0.1)", borderLeft: "1px solid rgba(125,249,255,0.1)", width: 56, height: 56 },
-          { bottom: 0, right: 0, borderBottom: "1px solid rgba(125,249,255,0.1)", borderRight: "1px solid rgba(125,249,255,0.1)", width: 56, height: 56 },
+          { top: 0, left: 0, borderTop: "1px solid rgba(139,92,246,0.1)", borderLeft: "1px solid rgba(139,92,246,0.1)", width: 56, height: 56 },
+          { top: 0, right: 0, borderTop: "1px solid rgba(139,92,246,0.1)", borderRight: "1px solid rgba(139,92,246,0.1)", width: 56, height: 56 },
+          { bottom: 0, left: 0, borderBottom: "1px solid rgba(139,92,246,0.1)", borderLeft: "1px solid rgba(139,92,246,0.1)", width: 56, height: 56 },
+          { bottom: 0, right: 0, borderBottom: "1px solid rgba(139,92,246,0.1)", borderRight: "1px solid rgba(139,92,246,0.1)", width: 56, height: 56 },
         ].map((style, i) => (
           <div key={i} className="absolute" style={style} />
         ))}
@@ -114,22 +114,22 @@ export default function CTA() {
             <motion.div
               animate={{ scaleX: [0, 1] }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              style={{ width: 40, height: 1, background: "linear-gradient(to right, transparent, rgba(125,249,255,0.4))", transformOrigin: "right" }}
+              style={{ width: 40, height: 1, background: "linear-gradient(to right, transparent, rgba(139,92,246,0.4))", transformOrigin: "right" }}
             />
-            <span className="terminal-line" style={{ color: "rgba(125,249,255,0.45)", letterSpacing: "0.3em", fontSize: 9 }}>
+            <span className="terminal-line" style={{ color: "rgba(139,92,246,0.45)", letterSpacing: "0.3em", fontSize: 9 }}>
               ENGAGE CHAOS // RESTRICTED ACCESS
             </span>
             <motion.div
               animate={{ scaleX: [0, 1] }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              style={{ width: 40, height: 1, background: "linear-gradient(to left, transparent, rgba(125,249,255,0.4))", transformOrigin: "left" }}
+              style={{ width: 40, height: 1, background: "linear-gradient(to left, transparent, rgba(139,92,246,0.4))", transformOrigin: "left" }}
             />
           </div>
 
           {/* Headline */}
           <h2
             style={{
-              fontFamily: "'Inter Tight', sans-serif",
+              fontFamily: "'Sora', sans-serif",
               fontWeight: 900,
               fontSize: "clamp(2.5rem, 6vw, 5.5rem)",
               lineHeight: 0.9,
@@ -142,14 +142,14 @@ export default function CTA() {
             <br />
             <span
               style={{
-                background: "linear-gradient(135deg, #7DF9FF, #00FFB3, #7DF9FF)",
+                background: "linear-gradient(135deg, #8B5CF6, #22D3EE, #8B5CF6)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 backgroundSize: "200%",
                 animation: "gradientShift 4s ease-in-out infinite",
                 display: "inline-block",
-                filter: "drop-shadow(0 0 40px rgba(125,249,255,0.3))",
+                filter: "drop-shadow(0 0 40px rgba(139,92,246,0.3))",
               }}
             >
               Operational Intelligence
@@ -166,7 +166,7 @@ export default function CTA() {
 
           <p
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "1.05rem",
               lineHeight: 1.7,
               color: "rgba(255,255,255,0.38)",
@@ -208,9 +208,9 @@ export default function CTA() {
                 }}
                 onMouseEnter={e => {
                   const el = e.currentTarget;
-                  el.style.borderTopColor = "rgba(125,249,255,0.4)";
+                  el.style.borderTopColor = "rgba(139,92,246,0.4)";
                   el.style.background = "rgba(12,18,28,0.99)";
-                  el.style.boxShadow = "0 8px 30px rgba(0,0,0,0.3), 0 0 15px rgba(125,249,255,0.05)";
+                  el.style.boxShadow = "0 8px 30px rgba(0,0,0,0.3), 0 0 15px rgba(139,92,246,0.05)";
                 }}
                 onMouseLeave={e => {
                   const el = e.currentTarget;
@@ -221,10 +221,10 @@ export default function CTA() {
               >
                 <div
                   style={{
-                    fontFamily: "'Inter Tight', sans-serif",
+                    fontFamily: "'Sora', sans-serif",
                     fontWeight: 900,
                     fontSize: "1.5rem",
-                    background: "linear-gradient(135deg, rgba(125,249,255,0.15), rgba(125,249,255,0.06))",
+                    background: "linear-gradient(135deg, rgba(139,92,246,0.15), rgba(139,92,246,0.06))",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -233,12 +233,12 @@ export default function CTA() {
                 >
                   {p.step}
                 </div>
-                <div className="terminal-line mb-1" style={{ fontSize: 8, color: "rgba(125,249,255,0.3)" }}>
+                <div className="terminal-line mb-1" style={{ fontSize: 8, color: "rgba(139,92,246,0.3)" }}>
                   STEP {p.step}
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Inter Tight', sans-serif",
+                    fontFamily: "'Sora', sans-serif",
                     fontWeight: 700,
                     fontSize: "0.85rem",
                     textTransform: "uppercase",

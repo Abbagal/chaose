@@ -100,7 +100,7 @@ export default function SanjayCapabilities() {
     <section
       ref={ref}
       style={{
-        background: "linear-gradient(180deg, #0B0F14 0%, #050709 100%)",
+        background: "linear-gradient(180deg, #100D1F 0%, #050709 100%)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -113,7 +113,7 @@ export default function SanjayCapabilities() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,255,179,0.03), transparent)",
+            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(34,211,238,0.03), transparent)",
         }}
       />
 
@@ -133,7 +133,7 @@ export default function SanjayCapabilities() {
           <div className="section-label mb-6">Intelligence Knowledge Platform</div>
           <h2
             style={{
-              fontFamily: "'Inter Tight', sans-serif",
+              fontFamily: "'Sora', sans-serif",
               fontWeight: 900,
               fontSize: "clamp(2.5rem, 6vw, 5rem)",
               lineHeight: 1,
@@ -146,7 +146,7 @@ export default function SanjayCapabilities() {
           </h2>
           <p
             style={{
-              fontFamily: "'Space Grotesk', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "1.125rem",
               lineHeight: 1.7,
               color: "rgba(255,255,255,0.5)",
@@ -170,20 +170,20 @@ export default function SanjayCapabilities() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 style={{
-                  background: "rgba(5,7,10,0.6)",
+                  background: "rgba(7,6,15,0.6)",
                   border: "1px solid rgba(255,255,255,0.08)",
                   padding: "2rem",
                   position: "relative",
                   overflow: "hidden",
                 }}
-                className="group hover:border-[rgba(0,255,179,0.3)] transition-all duration-300"
+                className="group hover:border-[rgba(34,211,238,0.3)] transition-all duration-300"
               >
                 {/* Corner accent */}
                 <div
                   className="absolute top-0 left-0 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
-                    borderTop: "2px solid rgba(0,255,179,0.5)",
-                    borderLeft: "2px solid rgba(0,255,179,0.5)",
+                    borderTop: "2px solid rgba(34,211,238,0.5)",
+                    borderLeft: "2px solid rgba(34,211,238,0.5)",
                   }}
                 />
 
@@ -193,17 +193,17 @@ export default function SanjayCapabilities() {
                   style={{
                     display: "inline-flex",
                     padding: "0.75rem",
-                    background: "rgba(0,255,179,0.08)",
-                    border: "1px solid rgba(0,255,179,0.2)",
+                    background: "rgba(34,211,238,0.08)",
+                    border: "1px solid rgba(34,211,238,0.2)",
                   }}
                 >
-                  <Icon size={24} style={{ color: "#00FFB3" }} />
+                  <Icon size={24} style={{ color: "#22D3EE" }} />
                 </div>
 
                 {/* Title */}
                 <h3
                   style={{
-                    fontFamily: "'Inter Tight', sans-serif",
+                    fontFamily: "'Sora', sans-serif",
                     fontWeight: 700,
                     fontSize: "1.125rem",
                     color: "#fff",
@@ -217,7 +217,7 @@ export default function SanjayCapabilities() {
                 {/* Description */}
                 <p
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                     fontSize: "0.875rem",
                     lineHeight: 1.7,
                     color: "rgba(255,255,255,0.45)",
@@ -231,7 +231,7 @@ export default function SanjayCapabilities() {
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{
                     background:
-                      "radial-gradient(circle at 50% 50%, rgba(0,255,179,0.05), transparent 70%)",
+                      "radial-gradient(circle at 50% 50%, rgba(34,211,238,0.05), transparent 70%)",
                   }}
                 />
               </motion.div>
@@ -249,7 +249,7 @@ export default function SanjayCapabilities() {
           <p
             className="terminal-line"
             style={{
-              color: "rgba(125,249,255,0.4)",
+              color: "rgba(139,92,246,0.4)",
               fontSize: "0.75rem",
               letterSpacing: "0.2em",
             }}

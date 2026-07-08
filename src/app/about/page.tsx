@@ -30,12 +30,12 @@ export default function AboutPage() {
   const principlesInView = useInView(principlesRef, { once: true });
 
   return (
-    <div className="bg-[#05070A] min-h-screen pt-20">
+    <div className="bg-[#07060F] min-h-screen pt-20">
       {/* Hero */}
       <section className="relative py-24 lg:py-36 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(125,249,255,0.06),transparent)]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7DF9FF]/20 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(139,92,246,0.06),transparent)]" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8B5CF6]/20 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -44,15 +44,15 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="h-px w-12 bg-[#7DF9FF]/40" />
-              <span className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase">
+              <div className="h-px w-12 bg-[#8B5CF6]/40" />
+              <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">
                 Defence AI Research Lab
               </span>
             </div>
             <h1 className="text-5xl lg:text-8xl font-tight font-black uppercase leading-[0.9] tracking-tight mb-8">
               <span className="text-white">We Build</span>
               <br />
-              <span className="text-[#7DF9FF]">What Keeps</span>
+              <span className="gradient-text-cyan">What Keeps</span>
               <br />
               <span className="text-white">Nations Secure.</span>
             </h1>
@@ -65,7 +65,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section ref={missionRef} className="relative py-24 bg-[#0B0F14]">
+      <section ref={missionRef} className="relative py-24 bg-[#100D1F]">
         <div className="absolute inset-0 tactical-grid opacity-30" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
@@ -78,13 +78,13 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-px w-12 bg-[#7DF9FF]/40" />
-                <span className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase">Mission</span>
+                <div className="h-px w-12 bg-[#8B5CF6]/40" />
+                <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">Mission</span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase leading-[0.9] tracking-tight text-white mb-8">
-                Decision Advantage <span className="text-[#7DF9FF]">Through</span> Sovereign AI
+                Decision Advantage <span className="gradient-text-cyan">Through</span> Sovereign AI
               </h2>
-              <blockquote className="border-l-2 border-[#7DF9FF]/40 pl-6 mb-8">
+              <blockquote className="border-l-2 border-[#8B5CF6]/40 pl-6 mb-8">
                 <p className="text-white/70 text-lg leading-relaxed font-grotesk italic">
                   "To build sovereign AI systems that enhance operational awareness, accelerate decision-making, and strengthen national security."
                 </p>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 { label: "Flagship Platform", value: "SANJAY v2.4.1" },
                 { label: "Nations Deployed", value: "17+" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center bg-[#0B0F14] px-6 py-4">
+                <div key={i} className="flex items-center bg-[#100D1F] px-6 py-4">
                   <span className="font-mono text-[11px] text-white/30 tracking-widest uppercase w-40">{item.label}</span>
                   <span className="text-white/70 text-sm font-grotesk">{item.value}</span>
                 </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
       </section>
 
       {/* Research */}
-      <section ref={researchRef} id="research" className="relative py-24 bg-[#05070A]">
+      <section ref={researchRef} id="research" className="relative py-24 bg-[#07060F]">
         <div className="absolute inset-0 bg-grid opacity-25" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -129,11 +129,11 @@ export default function AboutPage() {
             className="mb-16"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-12 bg-[#7DF9FF]/40" />
-              <span className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase">Research Programs</span>
+              <div className="h-px w-12 bg-[#8B5CF6]/40" />
+              <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">Research Programs</span>
             </div>
             <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white leading-tight">
-              Active Research <span className="text-[#7DF9FF]">Areas</span>
+              Active Research <span className="gradient-text-cyan">Areas</span>
             </h2>
           </motion.div>
 
@@ -144,14 +144,14 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={researchInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-[#05070A] p-8 group hover:bg-[#0B0F14] transition-colors"
+                className="bg-[#07060F] p-8 group hover:bg-[#100D1F] transition-colors"
               >
                 <div className="flex items-start gap-4">
-                  <div className="font-mono text-[10px] text-[#7DF9FF]/30 tracking-widest mt-1 flex-shrink-0">
+                  <div className="font-mono text-[10px] text-[#8B5CF6]/30 tracking-widest mt-1 flex-shrink-0">
                     RES-{String(i + 1).padStart(2, "0")}
                   </div>
                   <div>
-                    <h3 className="text-base font-tight font-bold uppercase tracking-wide text-white mb-2 group-hover:text-[#7DF9FF] transition-colors">
+                    <h3 className="text-base font-tight font-bold uppercase tracking-wide text-white mb-2 group-hover:text-[#8B5CF6] transition-colors">
                       {item.area}
                     </h3>
                     <p className="text-white/35 text-sm leading-relaxed font-grotesk">{item.focus}</p>
@@ -165,9 +165,9 @@ export default function AboutPage() {
             initial={{ opacity: 0 }}
             animate={researchInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-8 p-5 border border-[#FF6B35]/20 bg-[#FF6B35]/[0.03]"
+            className="mt-8 p-5 border border-[#F59E0B]/20 bg-[#F59E0B]/[0.03]"
           >
-            <p className="font-mono text-[11px] text-[#FF6B35]/50 tracking-widest uppercase">
+            <p className="font-mono text-[11px] text-[#F59E0B]/50 tracking-widest uppercase">
               Research publications, technical papers, and capability demonstrations are available to cleared partners under NDA. Contact our research team for access.
             </p>
           </motion.div>
@@ -175,7 +175,7 @@ export default function AboutPage() {
       </section>
 
       {/* Principles */}
-      <section ref={principlesRef} className="relative py-24 bg-[#0B0F14]">
+      <section ref={principlesRef} className="relative py-24 bg-[#100D1F]">
         <div className="absolute inset-0 tactical-grid opacity-30" />
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -185,8 +185,8 @@ export default function AboutPage() {
             animate={principlesInView ? { opacity: 1, y: 0 } : {}}
             className="flex items-center gap-4 mb-16"
           >
-            <div className="h-px w-12 bg-[#7DF9FF]/40" />
-            <span className="font-mono text-[11px] text-[#7DF9FF]/50 tracking-[0.3em] uppercase">Operating Principles</span>
+            <div className="h-px w-12 bg-[#8B5CF6]/40" />
+            <span className="font-mono text-[11px] text-[#8B5CF6]/50 tracking-[0.3em] uppercase">Operating Principles</span>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -196,10 +196,10 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={principlesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="relative p-8 border border-white/[0.06] group hover:border-[#7DF9FF]/15 transition-colors"
+                className="relative p-8 border border-white/[0.06] group hover:border-[#8B5CF6]/15 transition-colors"
               >
-                <div className="absolute top-0 left-0 w-0 h-px group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#7DF9FF]/40 to-transparent" />
-                <div className="font-mono text-[11px] text-[#7DF9FF]/30 tracking-widest mb-4">{p.code}</div>
+                <div className="absolute top-0 left-0 w-0 h-px group-hover:w-full transition-all duration-500 bg-gradient-to-r from-[#8B5CF6]/40 to-transparent" />
+                <div className="font-mono text-[11px] text-[#8B5CF6]/30 tracking-widest mb-4">{p.code}</div>
                 <h3 className="text-xl font-tight font-bold uppercase tracking-wide text-white mb-4">{p.title}</h3>
                 <p className="text-white/40 text-sm leading-relaxed font-grotesk">{p.body}</p>
               </motion.div>
@@ -209,18 +209,18 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="relative py-24 bg-[#05070A] text-center">
+      <section className="relative py-24 bg-[#07060F] text-center">
         <div className="absolute inset-0 bg-grid opacity-25" />
         <div className="relative z-10 max-w-2xl mx-auto px-6">
           <h2 className="text-4xl lg:text-5xl font-tight font-black uppercase text-white mb-6">
-            Work With <span className="text-[#7DF9FF]">Chaos</span>
+            Work With <span className="gradient-text-cyan">Chaos</span>
           </h2>
           <p className="text-white/40 text-base font-grotesk mb-8">
             We engage with select government and defence partners for sovereign AI deployment programs. Start a conversation with our team.
           </p>
           <Link
             href="/contact"
-            className="group inline-flex items-center gap-3 px-10 py-4 bg-[#7DF9FF] text-[#05070A] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors"
+            className="group inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#8B5CF6] to-[#22D3EE] text-[#07060F] font-bold text-sm tracking-wider uppercase hover:bg-white transition-colors"
           >
             Engage Our Team
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />

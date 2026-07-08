@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Line } from "@react-three/drei";
 import * as THREE from "three";
@@ -27,7 +27,7 @@ function NetworkNode({ node, index }: { node: NodeData; index: number }) {
     }
   });
 
-  const color = node.type === "hub" ? "#7DF9FF" : node.type === "sensor" ? "#00FFB3" : "#FF6B35";
+  const color = node.type === "hub" ? "#8B5CF6" : node.type === "sensor" ? "#22D3EE" : "#F59E0B";
   const size = node.type === "hub" ? 0.12 : 0.07;
 
   return (
@@ -48,7 +48,8 @@ function NetworkNode({ node, index }: { node: NodeData; index: number }) {
 
 function DataPulse({ start, end, speed }: { start: THREE.Vector3; end: THREE.Vector3; speed: number }) {
   const ref = useRef<THREE.Mesh>(null);
-  const progress = useRef(Math.random());
+  const [seed] = useState(() => Math.random());
+  const progress = useRef(seed);
 
   useFrame((_, delta) => {
     progress.current = (progress.current + delta * speed) % 1;
@@ -60,7 +61,7 @@ function DataPulse({ start, end, speed }: { start: THREE.Vector3; end: THREE.Vec
   return (
     <mesh ref={ref}>
       <sphereGeometry args={[0.04, 8, 8]} />
-      <meshBasicMaterial color="#7DF9FF" transparent opacity={0.9} />
+      <meshBasicMaterial color="#8B5CF6" transparent opacity={0.9} />
     </mesh>
   );
 }
@@ -99,13 +100,13 @@ function Network() {
     return pairs;
   }, [nodes]);
 
-  const pulses = useMemo(() => {
-    return connections.slice(0, 8).map((conn, i) => ({
+  const [pulses] = useState(() => {
+    return connections.slice(0, 8).map((conn) => ({
       start: conn[0],
       end: conn[1],
       speed: 0.3 + Math.random() * 0.4,
     }));
-  }, [connections]);
+  });
 
   useFrame((state) => {
     if (groupRef.current) {
@@ -120,7 +121,7 @@ function Network() {
         <Line
           key={i}
           points={[a, b]}
-          color="#7DF9FF"
+          color="#8B5CF6"
           lineWidth={0.5}
           transparent
           opacity={0.12}
@@ -145,8 +146,8 @@ export default function IntelligenceNetwork() {
         style={{ background: "transparent" }}
       >
         <ambientLight intensity={0.2} />
-        <pointLight position={[5, 5, 5]} color="#7DF9FF" intensity={0.4} />
-        <pointLight position={[-5, -5, 5]} color="#00FFB3" intensity={0.2} />
+        <pointLight position={[5, 5, 5]} color="#8B5CF6" intensity={0.4} />
+        <pointLight position={[-5, -5, 5]} color="#22D3EE" intensity={0.2} />
         <Network />
       </Canvas>
     </div>

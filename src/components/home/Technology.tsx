@@ -10,7 +10,7 @@ const DOMAINS = [
     short: "AI/ML",
     desc: "Foundation models, reinforcement learning, and multi-modal AI systems trained for defence-specific tasks and operational contexts.",
     sub: ["Foundation Models", "Reinforcement Learning", "Multi-modal AI", "Edge Inference"],
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     trl: 9,
   },
   {
@@ -19,7 +19,7 @@ const DOMAINS = [
     short: "CV",
     desc: "Real-time object detection, tracking, and recognition across EO/IR, SAR, and hyperspectral imagery at any scale.",
     sub: ["Object Detection", "Change Detection", "IR/EO Fusion", "SAR"],
-    color: "#00FFB3",
+    color: "#22D3EE",
     trl: 9,
   },
   {
@@ -28,7 +28,7 @@ const DOMAINS = [
     short: "LLM",
     desc: "Sovereign LLMs deployed on-premises for intelligence analysis, report generation, and natural-language command interfaces.",
     sub: ["Sovereign LLM", "RAG Systems", "Doc Analysis", "NL Command"],
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     trl: 8,
   },
   {
@@ -37,7 +37,7 @@ const DOMAINS = [
     short: "MAS",
     desc: "Autonomous agent frameworks coordinating across platforms, domains, and roles in complex operational environments.",
     sub: ["Agent Orchestration", "Task Decomposition", "Swarm Control", "HMT"],
-    color: "#FF6B35",
+    color: "#F59E0B",
     trl: 7,
   },
   {
@@ -46,7 +46,7 @@ const DOMAINS = [
     short: "GRAPH",
     desc: "Knowledge graphs and network analysis revealing hidden relationships in massive intelligence datasets.",
     sub: ["Knowledge Graphs", "Link Analysis", "Entity Resolution", "GNN"],
-    color: "#00FFB3",
+    color: "#22D3EE",
     trl: 9,
   },
   {
@@ -55,7 +55,7 @@ const DOMAINS = [
     short: "FUSION",
     desc: "Kalman filtering, particle filters, and deep fusion combining radar, LIDAR, acoustic, seismic, and SIGINT.",
     sub: ["Kalman Filter", "LIDAR Fusion", "Radar Proc.", "Multi-INT"],
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     trl: 9,
   },
   {
@@ -64,7 +64,7 @@ const DOMAINS = [
     short: "GEOINT",
     desc: "Change detection, terrain analysis, pattern-of-life, and predictive geospatial modeling at national scale.",
     sub: ["Change Det.", "Pattern of Life", "Terrain AI", "GEOINT AI"],
-    color: "#00FFB3",
+    color: "#22D3EE",
     trl: 9,
   },
   {
@@ -73,7 +73,7 @@ const DOMAINS = [
     short: "EDGE",
     desc: "Quantized models and inference engines optimized for tactical edge deployment — no connectivity required.",
     sub: ["Model Quant.", "FPGA Deploy", "Offline Infer.", "Power Opt."],
-    color: "#FF6B35",
+    color: "#F59E0B",
     trl: 8,
   },
   {
@@ -82,7 +82,7 @@ const DOMAINS = [
     short: "SOVEREIGN",
     desc: "Full-stack sovereign AI infrastructure. Air-gapped deployment, classified compute, zero-trust architecture.",
     sub: ["Air Gap", "Zero Trust", "HSM", "FIPS 140-2"],
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     trl: 9,
   },
 ];
@@ -123,7 +123,7 @@ export default function Technology() {
     <section
       ref={ref}
       id="technology"
-      style={{ background: "#05070A", position: "relative", overflow: "hidden" }}
+      style={{ background: "#07060F", position: "relative", overflow: "hidden" }}
     >
       <div className="absolute inset-0 bg-grid" style={{ opacity: 0.25 }} />
       <div className="absolute inset-0 mesh-bg" />
@@ -135,7 +135,7 @@ export default function Technology() {
           top: 0, left: "50%",
           width: 1,
           height: "100%",
-          background: "linear-gradient(to bottom, transparent, rgba(125,249,255,0.06), transparent)",
+          background: "linear-gradient(to bottom, transparent, rgba(139,92,246,0.06), transparent)",
         }}
       />
 
@@ -145,7 +145,7 @@ export default function Technology() {
         style={{
           width: 500, height: 500,
           top: "30%", right: "10%",
-          background: "radial-gradient(circle, rgba(0,255,179,0.05) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(34,211,238,0.05) 0%, transparent 70%)",
         }}
       />
 
@@ -164,7 +164,7 @@ export default function Technology() {
           <div className="grid lg:grid-cols-2 gap-8 items-end">
             <h2
               style={{
-                fontFamily: "'Inter Tight', sans-serif",
+                fontFamily: "'Sora', sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
                 lineHeight: 0.9,
@@ -176,11 +176,11 @@ export default function Technology() {
               <span
                 style={{
                   display: "block",
-                  background: "linear-gradient(135deg, #7DF9FF, #00FFB3)",
+                  background: "linear-gradient(135deg, #8B5CF6, #22D3EE)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                  filter: "drop-shadow(0 0 20px rgba(125,249,255,0.3))",
+                  filter: "drop-shadow(0 0 20px rgba(139,92,246,0.3))",
                 }}
               >
                 Proven
@@ -190,7 +190,7 @@ export default function Technology() {
             <div>
               <p
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "0.9rem",
                   lineHeight: 1.8,
                   color: "rgba(255,255,255,0.35)",
@@ -205,12 +205,12 @@ export default function Technology() {
                   alignItems: "center",
                   gap: 8,
                   padding: "8px 16px",
-                  border: "1px solid rgba(255,107,53,0.22)",
-                  background: "rgba(255,107,53,0.05)",
+                  border: "1px solid rgba(245,158,11,0.22)",
+                  background: "rgba(245,158,11,0.05)",
                 }}
               >
-                <div className="w-1.5 h-1.5 rounded-full animate-node-glow" style={{ background: "#FF6B35" }} />
-                <span className="terminal-line" style={{ fontSize: 9, color: "rgba(255,107,53,0.65)" }}>
+                <div className="w-1.5 h-1.5 rounded-full animate-node-glow" style={{ background: "#F59E0B" }} />
+                <span className="terminal-line" style={{ fontSize: 9, color: "rgba(245,158,11,0.65)" }}>
                   ALL RESEARCH CLASSIFIED // NDA REQUIRED FOR ACCESS
                 </span>
               </div>
@@ -287,15 +287,15 @@ export default function Technology() {
               {/* Name */}
               <h3
                 style={{
-                  fontFamily: "'Inter Tight', sans-serif",
+                  fontFamily: "'Sora', sans-serif",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   textTransform: "uppercase",
                   letterSpacing: "0.04em",
-                  color: active === i ? "#7DF9FF" : "#fff",
+                  color: active === i ? "#8B5CF6" : "#fff",
                   marginBottom: "0.6rem",
                   transition: "color 0.25s",
-                  textShadow: active === i ? "0 0 20px rgba(125,249,255,0.5)" : "none",
+                  textShadow: active === i ? "0 0 20px rgba(139,92,246,0.5)" : "none",
                 }}
               >
                 {tech.name}
@@ -304,7 +304,7 @@ export default function Technology() {
               {/* Description */}
               <p
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "0.8rem",
                   lineHeight: 1.7,
                   color: "rgba(255,255,255,0.28)",
@@ -366,24 +366,24 @@ export default function Technology() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mt-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-5 animate-shimmer"
           style={{
-            background: "rgba(125,249,255,0.02)",
-            border: "1px solid rgba(125,249,255,0.07)",
+            background: "rgba(139,92,246,0.02)",
+            border: "1px solid rgba(139,92,246,0.07)",
           }}
         >
           <div className="flex items-start gap-4">
-            <div style={{ width: 3, alignSelf: "stretch", background: "linear-gradient(to bottom, #7DF9FF, #00FFB3)", flexShrink: 0, minHeight: 32 }} />
+            <div style={{ width: 3, alignSelf: "stretch", background: "linear-gradient(to bottom, #8B5CF6, #22D3EE)", flexShrink: 0, minHeight: 32 }} />
             <div>
-              <div className="terminal-line mb-1" style={{ fontSize: 9, color: "rgba(125,249,255,0.35)" }}>
+              <div className="terminal-line mb-1" style={{ fontSize: 9, color: "rgba(139,92,246,0.35)" }}>
                 RESEARCH ACCESS
               </div>
-              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.32)" }}>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.32)" }}>
                 Publications, technical papers, and capability demonstrations available to cleared partners under NDA.
               </p>
             </div>
           </div>
           <div
             className="terminal-line whitespace-nowrap"
-            style={{ fontSize: 9, color: "rgba(125,249,255,0.3)" }}
+            style={{ fontSize: 9, color: "rgba(139,92,246,0.3)" }}
           >
             TRL 6–9 // ALL DOMAINS // PRODUCTION READY
           </div>

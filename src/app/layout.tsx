@@ -27,7 +27,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-full bg-[#05070A] text-white antialiased overflow-x-hidden">
+      <body className="min-h-full bg-[#07060F] text-white antialiased overflow-x-hidden">
+        <div className="aurora-field" aria-hidden="true">
+          <div className="aurora-blob-3" />
+        </div>
         <Navbar />
         <main className="relative">{children}</main>
         <Footer />

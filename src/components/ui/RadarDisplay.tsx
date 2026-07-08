@@ -11,9 +11,9 @@ type Blip = {
 };
 
 const COLORS = {
-  hostile: "#FF6B35",
-  friendly: "#00FFB3",
-  unknown: "#7DF9FF",
+  hostile: "#F59E0B",
+  friendly: "#22D3EE",
+  unknown: "#8B5CF6",
 };
 
 const LABELS = [
@@ -69,13 +69,13 @@ export default function RadarDisplay({ size = 280 }: { size?: number }) {
       [0.25, 0.5, 0.75, 1].forEach((f) => {
         ctx.beginPath();
         ctx.arc(cx, cy, r * f, 0, Math.PI * 2);
-        ctx.strokeStyle = "rgba(0,255,179,0.12)";
+        ctx.strokeStyle = "rgba(34,211,238,0.12)";
         ctx.lineWidth = 1;
         ctx.stroke();
       });
 
       // Cross hairs
-      ctx.strokeStyle = "rgba(0,255,179,0.1)";
+      ctx.strokeStyle = "rgba(34,211,238,0.1)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(cx - r, cy);
@@ -94,8 +94,8 @@ export default function RadarDisplay({ size = 280 }: { size?: number }) {
       ctx.arc(cx, cy, r, sweep - 1.5, sweep, false);
       ctx.closePath();
       const sweepGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
-      sweepGrad.addColorStop(0, "rgba(0,255,179,0.25)");
-      sweepGrad.addColorStop(1, "rgba(0,255,179,0)");
+      sweepGrad.addColorStop(0, "rgba(34,211,238,0.25)");
+      sweepGrad.addColorStop(1, "rgba(34,211,238,0)");
       ctx.fillStyle = sweepGrad;
       ctx.fill();
 
@@ -103,7 +103,7 @@ export default function RadarDisplay({ size = 280 }: { size?: number }) {
       ctx.beginPath();
       ctx.moveTo(cx, cy);
       ctx.lineTo(cx + Math.cos(sweep) * r, cy + Math.sin(sweep) * r);
-      ctx.strokeStyle = "rgba(0,255,179,0.7)";
+      ctx.strokeStyle = "rgba(34,211,238,0.7)";
       ctx.lineWidth = 1.5;
       ctx.stroke();
       ctx.restore();
@@ -117,7 +117,7 @@ export default function RadarDisplay({ size = 280 }: { size?: number }) {
         ctx.arc(cx, cy, r, a - 0.04, a, false);
         ctx.closePath();
         const alpha = (1 - i / 40) * 0.06;
-        ctx.fillStyle = `rgba(0,255,179,${alpha})`;
+        ctx.fillStyle = `rgba(34,211,238,${alpha})`;
         ctx.fill();
       }
       ctx.restore();
@@ -157,14 +157,14 @@ export default function RadarDisplay({ size = 280 }: { size?: number }) {
       // Outer ring
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, Math.PI * 2);
-      ctx.strokeStyle = "rgba(0,255,179,0.25)";
+      ctx.strokeStyle = "rgba(34,211,238,0.25)";
       ctx.lineWidth = 1;
       ctx.stroke();
 
       // Center dot
       ctx.beginPath();
       ctx.arc(cx, cy, 3, 0, Math.PI * 2);
-      ctx.fillStyle = "#00FFB3";
+      ctx.fillStyle = "#22D3EE";
       ctx.fill();
 
       sweepAngle.current = (sweepAngle.current + 0.018) % (Math.PI * 2);

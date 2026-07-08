@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Line } from "@react-three/drei";
 import * as THREE from "three";
@@ -32,7 +32,7 @@ function GlobeMesh() {
         <meshPhongMaterial
           color="#050810"
           emissive="#0a1830"
-          specular="#7DF9FF"
+          specular="#8B5CF6"
           shininess={40}
           transparent
           opacity={0.97}
@@ -43,7 +43,7 @@ function GlobeMesh() {
       <mesh ref={wireRef}>
         <sphereGeometry args={[2.42, 36, 36]} />
         <meshBasicMaterial
-          color="#7DF9FF"
+          color="#8B5CF6"
           wireframe
           transparent
           opacity={0.055}
@@ -54,7 +54,7 @@ function GlobeMesh() {
       <mesh ref={innerGlowRef}>
         <sphereGeometry args={[2.38, 32, 32]} />
         <meshBasicMaterial
-          color="#7DF9FF"
+          color="#8B5CF6"
           transparent
           opacity={0.03}
           side={THREE.BackSide}
@@ -65,7 +65,7 @@ function GlobeMesh() {
       <mesh>
         <sphereGeometry args={[2.65, 32, 32]} />
         <meshBasicMaterial
-          color="#7DF9FF"
+          color="#8B5CF6"
           transparent
           opacity={0.012}
           side={THREE.BackSide}
@@ -76,7 +76,7 @@ function GlobeMesh() {
       <mesh>
         <sphereGeometry args={[2.9, 32, 32]} />
         <meshBasicMaterial
-          color="#00FFB3"
+          color="#22D3EE"
           transparent
           opacity={0.005}
           side={THREE.BackSide}
@@ -134,7 +134,7 @@ function DataNodes() {
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
-      <pointsMaterial color="#7DF9FF" size={0.045} transparent opacity={0.85} sizeAttenuation />
+      <pointsMaterial color="#8B5CF6" size={0.045} transparent opacity={0.85} sizeAttenuation />
     </points>
   );
 }
@@ -182,7 +182,7 @@ function ConnectionLines() {
         <Line
           key={i}
           points={pair as THREE.Vector3[]}
-          color="#7DF9FF"
+          color="#8B5CF6"
           lineWidth={0.5}
           transparent
           opacity={0.12}
@@ -212,17 +212,17 @@ function OrbitingSatellite({ radius, speed, inclination }: { radius: number; spe
       {/* Satellite body */}
       <mesh position={[radius, 0, 0]}>
         <boxGeometry args={[0.07, 0.025, 0.07]} />
-        <meshBasicMaterial color="#7DF9FF" />
+        <meshBasicMaterial color="#8B5CF6" />
       </mesh>
       {/* Solar panel */}
       <mesh position={[radius, 0, 0]}>
         <boxGeometry args={[0.22, 0.006, 0.025]} />
-        <meshBasicMaterial color="#7DF9FF" transparent opacity={0.7} />
+        <meshBasicMaterial color="#8B5CF6" transparent opacity={0.7} />
       </mesh>
       {/* Glow dot */}
       <mesh ref={trailRef} position={[radius, 0, 0]}>
         <sphereGeometry args={[0.04, 8, 8]} />
-        <meshBasicMaterial color="#00FFB3" transparent opacity={0.6} />
+        <meshBasicMaterial color="#22D3EE" transparent opacity={0.6} />
       </mesh>
     </group>
   );
@@ -230,7 +230,7 @@ function OrbitingSatellite({ radius, speed, inclination }: { radius: number; spe
 
 function ParticleField() {
   const count = 1200;
-  const positions = useMemo(() => {
+  const [positions] = useState(() => {
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
       const r = 5 + Math.random() * 10;
@@ -241,7 +241,7 @@ function ParticleField() {
       pos[i * 3 + 2] = r * Math.cos(phi);
     }
     return pos;
-  }, []);
+  });
 
   const ref = useRef<THREE.Points>(null);
 
@@ -276,7 +276,7 @@ function ScanRing() {
   return (
     <mesh ref={ref}>
       <torusGeometry args={[2.5, 0.008, 2, 64]} />
-      <meshBasicMaterial color="#7DF9FF" transparent opacity={0.1} />
+      <meshBasicMaterial color="#8B5CF6" transparent opacity={0.1} />
     </mesh>
   );
 }
@@ -290,18 +290,18 @@ export default function Globe() {
         style={{ background: "transparent" }}
       >
         <ambientLight intensity={0.08} />
-        <pointLight position={[10, 10, 10]} color="#7DF9FF" intensity={0.6} />
-        <pointLight position={[-10, -5, -10]} color="#00FFB3" intensity={0.25} />
+        <pointLight position={[10, 10, 10]} color="#8B5CF6" intensity={0.6} />
+        <pointLight position={[-10, -5, -10]} color="#22D3EE" intensity={0.25} />
         <pointLight position={[0, 8, -5]} color="#ffffff" intensity={0.1} />
 
         <GlobeMesh />
         <DataNodes />
         <ConnectionLines />
         <ScanRing />
-        <RadarRing radius={3.2} speed={0.3} color="#7DF9FF" opacity={0.35} />
-        <RadarRing radius={3.7} speed={-0.2} color="#00FFB3" opacity={0.25} />
-        <RadarRing radius={4.2} speed={0.15} color="#7DF9FF" opacity={0.18} />
-        <RadarRing radius={4.8} speed={-0.1} color="#00FFB3" opacity={0.1} />
+        <RadarRing radius={3.2} speed={0.3} color="#8B5CF6" opacity={0.35} />
+        <RadarRing radius={3.7} speed={-0.2} color="#22D3EE" opacity={0.25} />
+        <RadarRing radius={4.2} speed={0.15} color="#8B5CF6" opacity={0.18} />
+        <RadarRing radius={4.8} speed={-0.1} color="#22D3EE" opacity={0.1} />
         <OrbitingSatellite radius={3.4} speed={0.4} inclination={0.3} />
         <OrbitingSatellite radius={3.9} speed={-0.3} inclination={-0.5} />
         <OrbitingSatellite radius={4.4} speed={0.25} inclination={0.8} />

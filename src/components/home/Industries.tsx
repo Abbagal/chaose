@@ -10,7 +10,7 @@ const INDUSTRIES = [
     title: "Defence",
     sub: "Army / Navy / Air Force / Space",
     description: "Land, maritime, air, and cyber domains. Decision intelligence for military commands, joint operations, and strategic planning at all echelons.",
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     tags: ["Joint Ops", "C2 Systems", "ISR"],
     clearance: "TS/SCI",
   },
@@ -19,7 +19,7 @@ const INDUSTRIES = [
     title: "Intelligence Agencies",
     sub: "National Intelligence Directorates",
     description: "Analysis platforms for national intelligence agencies. Multi-source fusion, entity resolution, and link analysis at national scale.",
-    color: "#00FFB3",
+    color: "#22D3EE",
     tags: ["HUMINT", "Signal Proc", "Pattern of Life"],
     clearance: "TS/SCI/SAP",
   },
@@ -28,7 +28,7 @@ const INDUSTRIES = [
     title: "Homeland Security",
     sub: "Internal Security / CT Operations",
     description: "Integrated threat assessment for border protection, counter-terrorism, and critical infrastructure security.",
-    color: "#FF6B35",
+    color: "#F59E0B",
     tags: ["CT Ops", "Asset Protection", "Response"],
     clearance: "SECRET",
   },
@@ -37,7 +37,7 @@ const INDUSTRIES = [
     title: "Critical Infrastructure",
     sub: "Energy / Water / Comms / Finance",
     description: "AI-powered monitoring for power grids, water systems, communications, and financial infrastructure — protecting national dependencies.",
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     tags: ["Grid Security", "SCADA AI", "Anomaly Det."],
     clearance: "CUI",
   },
@@ -46,7 +46,7 @@ const INDUSTRIES = [
     title: "Border Security",
     sub: "Land / Maritime / Aerial",
     description: "Sensor fusion across land, maritime, and air borders. Autonomous detection, tracking, and interdiction coordination at scale.",
-    color: "#00FFB3",
+    color: "#22D3EE",
     tags: ["Sensor Fusion", "UAV Intel", "Cross-Border"],
     clearance: "SECRET",
   },
@@ -55,7 +55,7 @@ const INDUSTRIES = [
     title: "Emergency Response",
     sub: "Crisis Management / NDRF",
     description: "Unified command and control for large-scale emergencies. Resource coordination, situational awareness, and predictive allocation.",
-    color: "#FF6B35",
+    color: "#F59E0B",
     tags: ["Unified CMD", "Resource Ops", "Predictive AI"],
     clearance: "UNCLASSIFIED",
   },
@@ -64,18 +64,18 @@ const INDUSTRIES = [
     title: "Strategic Operations",
     sub: "National Command Authority",
     description: "Strategic-level decision intelligence for national command authorities, coalition operations, and long-range strategic planning.",
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     tags: ["NCA", "Coalition Ops", "Strategic Intel"],
     clearance: "TS/SCI/NOFORN",
   },
 ];
 
 const clearanceColor: Record<string, string> = {
-  "TS/SCI": "#FF6B35",
-  "TS/SCI/SAP": "#FF6B35",
-  "TS/SCI/NOFORN": "#FF6B35",
-  SECRET: "#7DF9FF",
-  CUI: "#00FFB3",
+  "TS/SCI": "#F59E0B",
+  "TS/SCI/SAP": "#F59E0B",
+  "TS/SCI/NOFORN": "#F59E0B",
+  SECRET: "#8B5CF6",
+  CUI: "#22D3EE",
   UNCLASSIFIED: "rgba(255,255,255,0.3)",
 };
 
@@ -95,11 +95,11 @@ export default function Industries() {
       {/* Vertical accent lines */}
       <div
         className="absolute top-0 bottom-0 pointer-events-none"
-        style={{ left: "25%", width: 1, background: "linear-gradient(to bottom, transparent, rgba(125,249,255,0.05), transparent)" }}
+        style={{ left: "25%", width: 1, background: "linear-gradient(to bottom, transparent, rgba(139,92,246,0.05), transparent)" }}
       />
       <div
         className="absolute top-0 bottom-0 pointer-events-none"
-        style={{ right: "25%", width: 1, background: "linear-gradient(to bottom, transparent, rgba(125,249,255,0.05), transparent)" }}
+        style={{ right: "25%", width: 1, background: "linear-gradient(to bottom, transparent, rgba(139,92,246,0.05), transparent)" }}
       />
 
       <div
@@ -117,7 +117,7 @@ export default function Industries() {
           <div className="grid lg:grid-cols-2 gap-8 items-end">
             <h2
               style={{
-                fontFamily: "'Inter Tight', sans-serif",
+                fontFamily: "'Sora', sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
                 lineHeight: 0.9,
@@ -129,11 +129,11 @@ export default function Industries() {
               <span
                 style={{
                   display: "block",
-                  background: "linear-gradient(135deg, #7DF9FF, #00FFB3)",
+                  background: "linear-gradient(135deg, #8B5CF6, #22D3EE)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                  filter: "drop-shadow(0 0 20px rgba(125,249,255,0.3))",
+                  filter: "drop-shadow(0 0 20px rgba(139,92,246,0.3))",
                 }}
               >
                 Security
@@ -143,7 +143,7 @@ export default function Industries() {
             <div>
               <p
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontSize: "0.9rem",
                   lineHeight: 1.8,
                   color: "rgba(255,255,255,0.35)",
@@ -215,7 +215,7 @@ export default function Industries() {
                 {/* Title */}
                 <h3
                   style={{
-                    fontFamily: "'Inter Tight', sans-serif",
+                    fontFamily: "'Sora', sans-serif",
                     fontWeight: 800,
                     fontSize: "1rem",
                     textTransform: "uppercase",
@@ -233,7 +233,7 @@ export default function Industries() {
 
                 <p
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                     fontSize: "0.78rem",
                     lineHeight: 1.65,
                     color: "rgba(255,255,255,0.3)",
@@ -278,8 +278,8 @@ export default function Industries() {
             <Tilt3D
               intensity={5}
               style={{
-                background: "rgba(125,249,255,0.025)",
-                border: "1px solid rgba(125,249,255,0.08)",
+                background: "rgba(139,92,246,0.025)",
+                border: "1px solid rgba(139,92,246,0.08)",
                 padding: "1.5rem",
                 display: "flex",
                 flexDirection: "column",
@@ -296,7 +296,7 @@ export default function Industries() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "'Inter Tight', sans-serif",
+                    fontFamily: "'Sora', sans-serif",
                     fontWeight: 800,
                     fontSize: "1rem",
                     textTransform: "uppercase",
@@ -310,7 +310,7 @@ export default function Industries() {
                   Bespoke sovereign AI deployments for classified environments and special access programs. Contact for details.
                 </p>
               </div>
-              <div className="terminal-line" style={{ fontSize: 9, color: "rgba(125,249,255,0.35)", marginTop: "1rem" }}>
+              <div className="terminal-line" style={{ fontSize: 9, color: "rgba(139,92,246,0.35)", marginTop: "1rem" }}>
                 CONTACT FOR ACCESS →
               </div>
             </Tilt3D>

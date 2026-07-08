@@ -32,11 +32,11 @@ const LINKS = {
 };
 
 const SYSTEM_METRICS = [
-  { label: "SANJAY", value: "v2.4.1", color: "#7DF9FF" },
-  { label: "NODES", value: "4,847", color: "#00FFB3" },
-  { label: "UPTIME", value: "99.99%", color: "#00FFB3" },
-  { label: "LATENCY", value: "74ms", color: "#7DF9FF" },
-  { label: "STATUS", value: "OPERATIONAL", color: "#00FFB3" },
+  { label: "SANJAY", value: "v2.4.1", color: "#8B5CF6" },
+  { label: "NODES", value: "4,847", color: "#22D3EE" },
+  { label: "UPTIME", value: "99.99%", color: "#22D3EE" },
+  { label: "LATENCY", value: "74ms", color: "#8B5CF6" },
+  { label: "STATUS", value: "OPERATIONAL", color: "#22D3EE" },
 ];
 
 export default function Footer() {
@@ -58,7 +58,7 @@ export default function Footer() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(125,249,255,0.04) 0%, transparent 60%)",
+          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139,92,246,0.04) 0%, transparent 60%)",
         }}
       />
 
@@ -74,9 +74,9 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <div
               className="animate-node-glow"
-              style={{ width: 8, height: 8, borderRadius: "50%", background: "#00FFB3" }}
+              style={{ width: 8, height: 8, borderRadius: "50%", background: "#22D3EE" }}
             />
-            <span className="terminal-line" style={{ fontSize: 9, color: "rgba(0,255,179,0.55)", letterSpacing: "0.2em" }}>
+            <span className="terminal-line" style={{ fontSize: 9, color: "rgba(34,211,238,0.55)", letterSpacing: "0.2em" }}>
               CHAOS SYSTEMS OPERATIONAL
             </span>
           </div>
@@ -97,18 +97,18 @@ export default function Footer() {
               <div style={{ position: "relative", width: 28, height: 28 }}>
                 <div style={{
                   position: "absolute", inset: 0,
-                  border: "1px solid rgba(125,249,255,0.25)",
+                  border: "1px solid rgba(139,92,246,0.25)",
                   transform: "rotate(45deg)",
-                  boxShadow: "0 0 8px rgba(125,249,255,0.1)",
+                  boxShadow: "0 0 8px rgba(139,92,246,0.1)",
                 }} />
-                <div style={{ position: "absolute", inset: 5, background: "rgba(125,249,255,0.08)", transform: "rotate(45deg)" }} />
+                <div style={{ position: "absolute", inset: 5, background: "rgba(139,92,246,0.08)", transform: "rotate(45deg)" }} />
                 <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <div style={{ width: 4, height: 4, background: "#7DF9FF", borderRadius: "50%", boxShadow: "0 0 6px #7DF9FF" }} />
+                  <div style={{ width: 4, height: 4, background: "#8B5CF6", borderRadius: "50%", boxShadow: "0 0 6px #8B5CF6" }} />
                 </div>
               </div>
               <div>
                 <div style={{
-                  fontFamily: "'Inter Tight', sans-serif",
+                  fontFamily: "'Sora', sans-serif",
                   fontWeight: 900,
                   fontSize: 14,
                   letterSpacing: "0.2em",
@@ -118,7 +118,7 @@ export default function Footer() {
                 }}>
                   CHAOS
                 </div>
-                <div className="terminal-line" style={{ fontSize: 7, color: "rgba(125,249,255,0.35)", letterSpacing: "0.2em" }}>
+                <div className="terminal-line" style={{ fontSize: 7, color: "rgba(139,92,246,0.35)", letterSpacing: "0.2em" }}>
                   DEFENCE AI RESEARCH
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function Footer() {
 
             <p
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontSize: "0.82rem",
                 lineHeight: 1.8,
                 color: "rgba(255,255,255,0.28)",
@@ -140,7 +140,7 @@ export default function Footer() {
             {/* Classification badges */}
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <span className="classified-badge" style={{ alignSelf: "flex-start" }}>ITAR CONTROLLED</span>
-              <span className="classified-badge" style={{ alignSelf: "flex-start", borderColor: "rgba(125,249,255,0.18)", color: "rgba(125,249,255,0.45)", background: "rgba(125,249,255,0.03)" }}>
+              <span className="classified-badge" style={{ alignSelf: "flex-start", borderColor: "rgba(139,92,246,0.18)", color: "rgba(139,92,246,0.45)", background: "rgba(139,92,246,0.03)" }}>
                 TS/SCI CAPABLE
               </span>
             </div>
@@ -151,7 +151,7 @@ export default function Footer() {
             <div key={category}>
               <div
                 className="terminal-line mb-5"
-                style={{ fontSize: 9, color: "rgba(125,249,255,0.35)", letterSpacing: "0.25em" }}
+                style={{ fontSize: 9, color: "rgba(139,92,246,0.35)", letterSpacing: "0.25em" }}
               >
                 {category.toUpperCase()}
               </div>
@@ -162,13 +162,13 @@ export default function Footer() {
                     href={link.href}
                     style={{
                       textDecoration: "none",
-                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontFamily: "'Inter', sans-serif",
                       fontSize: "0.82rem",
                       color: "rgba(255,255,255,0.28)",
                       transition: "color 0.2s",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.color = "rgba(125,249,255,0.75)";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "rgba(139,92,246,0.75)";
                     }}
                     onMouseLeave={(e) => {
                       (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.28)";
@@ -204,7 +204,7 @@ export default function Footer() {
                     letterSpacing: "0.1em",
                     transition: "color 0.2s",
                   }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(125,249,255,0.5)"; }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(139,92,246,0.5)"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.18)"; }}
                 >
                   {item}

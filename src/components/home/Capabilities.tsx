@@ -12,7 +12,7 @@ const CAPABILITIES = [
     description:
       "Combine SIGINT, HUMINT, IMINT, MASINT, OSINT into a single authoritative operational picture. Real-time ingestion at petabyte scale.",
     tags: ["SIGINT", "HUMINT", "OSINT", "MASINT"],
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     progress: 94,
   },
   {
@@ -22,7 +22,7 @@ const CAPABILITIES = [
     description:
       "Interactive 3D terrain, satellite imagery, blue-force tracking, threat overlays, and geospatial analysis in one unified interface.",
     tags: ["3D Terrain", "Blue Force", "Threat Map", "SAR"],
-    color: "#00FFB3",
+    color: "#22D3EE",
     progress: 91,
   },
   {
@@ -32,7 +32,7 @@ const CAPABILITIES = [
     description:
       "Natural language operational queries, automated pattern detection, and AI-generated assessments to accelerate analyst workflows.",
     tags: ["LLM", "NLP", "Pattern AI", "RAG"],
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     progress: 88,
   },
   {
@@ -42,7 +42,7 @@ const CAPABILITIES = [
     description:
       "Command and control for UAV swarms, UGVs, and robotic platforms. Human-machine teaming at operational scale.",
     tags: ["UAV C2", "Swarm AI", "UGV", "HMT"],
-    color: "#FF6B35",
+    color: "#F59E0B",
     progress: 82,
   },
   {
@@ -52,7 +52,7 @@ const CAPABILITIES = [
     description:
       "Live digital representations of physical environments. Simulate missions, predict adversary behavior, plan with confidence.",
     tags: ["Digital Twin", "Simulation", "Prediction", "Physics"],
-    color: "#00FFB3",
+    color: "#22D3EE",
     progress: 79,
   },
   {
@@ -62,7 +62,7 @@ const CAPABILITIES = [
     description:
       "AI-assisted course of action development. Deconflict operations, optimize routes, synchronize effects across domains.",
     tags: ["COA Dev", "Route Opt", "COOP", "CONOPS"],
-    color: "#7DF9FF",
+    color: "#8B5CF6",
     progress: 96,
   },
 ];
@@ -156,7 +156,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
         {/* Title */}
         <h3
           style={{
-            fontFamily: "'Inter Tight', sans-serif",
+            fontFamily: "'Sora', sans-serif",
             fontWeight: 800,
             fontSize: "1.05rem",
             textTransform: "uppercase",
@@ -172,7 +172,7 @@ function CapabilityCard({ cap, index, inView }: { cap: typeof CAPABILITIES[0]; i
         {/* Description */}
         <p
           style={{
-            fontFamily: "'Space Grotesk', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontSize: "0.825rem",
             lineHeight: 1.75,
             color: "rgba(255,255,255,0.33)",
@@ -244,7 +244,7 @@ export default function Capabilities() {
     <section
       ref={ref}
       id="capabilities"
-      style={{ background: "#05070A", position: "relative", overflow: "hidden" }}
+      style={{ background: "#07060F", position: "relative", overflow: "hidden" }}
     >
       {/* Mesh gradient background */}
       <div className="absolute inset-0 bg-grid" style={{ opacity: 0.3 }} />
@@ -256,13 +256,13 @@ export default function Capabilities() {
         style={{
           width: 500, height: 500,
           top: "20%", left: "10%",
-          background: "radial-gradient(circle, rgba(125,249,255,0.05) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(139,92,246,0.05) 0%, transparent 70%)",
         }}
       />
 
       <div
         className="absolute top-0 left-0 right-0"
-        style={{ height: 1, background: "linear-gradient(90deg, transparent, rgba(125,249,255,0.12), transparent)" }}
+        style={{ height: 1, background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.12), transparent)" }}
       />
 
       <div
@@ -280,7 +280,7 @@ export default function Capabilities() {
           <div className="grid lg:grid-cols-2 gap-8 items-end">
             <h2
               style={{
-                fontFamily: "'Inter Tight', sans-serif",
+                fontFamily: "'Sora', sans-serif",
                 fontWeight: 900,
                 fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
                 lineHeight: 0.9,
@@ -292,11 +292,11 @@ export default function Capabilities() {
               <span
                 style={{
                   display: "block",
-                  background: "linear-gradient(135deg, #7DF9FF, #00FFB3)",
+                  background: "linear-gradient(135deg, #8B5CF6, #22D3EE)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                  filter: "drop-shadow(0 0 20px rgba(125,249,255,0.3))",
+                  filter: "drop-shadow(0 0 20px rgba(139,92,246,0.3))",
                 }}
               >
                 Contested
@@ -305,7 +305,7 @@ export default function Capabilities() {
             </h2>
             <p
               style={{
-                fontFamily: "'Space Grotesk', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontSize: "0.9rem",
                 lineHeight: 1.8,
                 color: "rgba(255,255,255,0.35)",

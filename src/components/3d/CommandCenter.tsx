@@ -85,7 +85,7 @@ function DataGrid({ position }: { position: [number, number, number] }) {
         <Line
           key={i}
           points={[line.start, line.end]}
-          color="#7DF9FF"
+          color="#8B5CF6"
           lineWidth={0.5}
           transparent
           opacity={0.1}
@@ -111,13 +111,13 @@ function RadarDisplay({ position }: { position: [number, number, number] }) {
       {[0.4, 0.7, 1.0].map((r, i) => (
         <mesh key={i} ref={ringRefs[i]}>
           <torusGeometry args={[r, 0.005, 2, 64]} />
-          <meshBasicMaterial color="#00FFB3" transparent opacity={0.3} />
+          <meshBasicMaterial color="#22D3EE" transparent opacity={0.3} />
         </mesh>
       ))}
 
       {/* Sweep */}
       <mesh ref={sweepRef}>
-        <meshBasicMaterial color="#00FFB3" transparent opacity={0.4} side={THREE.DoubleSide} />
+        <meshBasicMaterial color="#22D3EE" transparent opacity={0.4} side={THREE.DoubleSide} />
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
@@ -131,8 +131,8 @@ function RadarDisplay({ position }: { position: [number, number, number] }) {
       </mesh>
 
       {/* Cross hairs */}
-      <Line points={[new THREE.Vector3(-1.1, 0, 0), new THREE.Vector3(1.1, 0, 0)]} color="#00FFB3" lineWidth={0.5} transparent opacity={0.2} />
-      <Line points={[new THREE.Vector3(0, -1.1, 0), new THREE.Vector3(0, 1.1, 0)]} color="#00FFB3" lineWidth={0.5} transparent opacity={0.2} />
+      <Line points={[new THREE.Vector3(-1.1, 0, 0), new THREE.Vector3(1.1, 0, 0)]} color="#22D3EE" lineWidth={0.5} transparent opacity={0.2} />
+      <Line points={[new THREE.Vector3(0, -1.1, 0), new THREE.Vector3(0, 1.1, 0)]} color="#22D3EE" lineWidth={0.5} transparent opacity={0.2} />
 
       {/* Blips */}
       {[
@@ -140,7 +140,7 @@ function RadarDisplay({ position }: { position: [number, number, number] }) {
       ].map(([x, y], i) => (
         <mesh key={i} position={[x, y, 0]}>
           <sphereGeometry args={[0.025, 8, 8]} />
-          <meshBasicMaterial color="#FF6B35" transparent opacity={0.8} />
+          <meshBasicMaterial color="#F59E0B" transparent opacity={0.8} />
         </mesh>
       ))}
     </group>
@@ -160,10 +160,10 @@ function CommandScene() {
   return (
     <group ref={groupRef}>
       {/* Main display panels */}
-      <HolographicPanel position={[0, 0.5, 0]} width={4} height={2.5} color="#7DF9FF" />
-      <HolographicPanel position={[-3.2, 0, -0.5]} width={2} height={3} color="#00FFB3" />
-      <HolographicPanel position={[3.2, 0, -0.5]} width={2} height={3} color="#7DF9FF" />
-      <HolographicPanel position={[0, -1.8, -0.3]} width={6} height={0.8} color="#FF6B35" />
+      <HolographicPanel position={[0, 0.5, 0]} width={4} height={2.5} color="#8B5CF6" />
+      <HolographicPanel position={[-3.2, 0, -0.5]} width={2} height={3} color="#22D3EE" />
+      <HolographicPanel position={[3.2, 0, -0.5]} width={2} height={3} color="#8B5CF6" />
+      <HolographicPanel position={[0, -1.8, -0.3]} width={6} height={0.8} color="#F59E0B" />
 
       {/* Data grid */}
       <DataGrid position={[0, 0.5, 0.01]} />
@@ -174,17 +174,17 @@ function CommandScene() {
       {/* Particles */}
       <mesh>
         <sphereGeometry args={[0.06, 8, 8]} />
-        <meshBasicMaterial color="#7DF9FF" />
+        <meshBasicMaterial color="#8B5CF6" />
       </mesh>
 
       {/* Floor plane */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2.5, 0]}>
         <planeGeometry args={[12, 8]} />
-        <meshBasicMaterial color="#7DF9FF" transparent opacity={0.02} />
+        <meshBasicMaterial color="#8B5CF6" transparent opacity={0.02} />
       </mesh>
       <Line
         points={[new THREE.Vector3(-6, -2.5, 0), new THREE.Vector3(6, -2.5, 0)]}
-        color="#7DF9FF"
+        color="#8B5CF6"
         lineWidth={1}
         transparent
         opacity={0.1}
@@ -202,9 +202,9 @@ export default function CommandCenter() {
         style={{ background: "transparent" }}
       >
         <ambientLight intensity={0.1} />
-        <pointLight position={[0, 5, 5]} color="#7DF9FF" intensity={0.6} />
-        <pointLight position={[-5, -2, 3]} color="#00FFB3" intensity={0.3} />
-        <pointLight position={[5, -2, 3]} color="#FF6B35" intensity={0.2} />
+        <pointLight position={[0, 5, 5]} color="#8B5CF6" intensity={0.6} />
+        <pointLight position={[-5, -2, 3]} color="#22D3EE" intensity={0.3} />
+        <pointLight position={[5, -2, 3]} color="#F59E0B" intensity={0.2} />
         <CommandScene />
       </Canvas>
     </div>
