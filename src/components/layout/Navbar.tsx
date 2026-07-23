@@ -40,8 +40,8 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           transition: "background 0.4s, border-color 0.4s",
-          background: scrolled ? "rgba(255,255,255,0.92)" : "rgba(255,255,255,0.6)",
-          borderBottom: scrolled ? "1px solid rgba(15,23,42,0.08)" : "1px solid transparent",
+          background: scrolled ? "rgba(5,7,10,0.92)" : "rgba(5,7,10,0.5)",
+          borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
           backdropFilter: "blur(16px)",
         }}
       >
@@ -85,7 +85,7 @@ export default function Navbar() {
                   fontSize: 16,
                   letterSpacing: "0.2em",
                   textTransform: "uppercase",
-                  color: "#0F172A",
+                  color: "#F2F4F7",
                   lineHeight: 1,
                 }}
               >
@@ -116,11 +116,11 @@ export default function Navbar() {
                   fontWeight: 500,
                   letterSpacing: "0.18em",
                   textTransform: "uppercase",
-                  color: "rgba(15,23,42,0.6)",
+                  color: "rgba(255,255,255,0.6)",
                   transition: "color 0.2s",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#8B5CF6")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(15,23,42,0.6)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
               >
                 {link.label}
                 {link.tag && (
@@ -144,7 +144,7 @@ export default function Navbar() {
           {/* Right controls */}
           <div className="hidden lg:flex items-center gap-4">
             {/* Live clock */}
-            <div className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.35)", letterSpacing: "0.1em" }}>
+            <div className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.35)", letterSpacing: "0.1em" }}>
               {time}
             </div>
             {/* Status dot */}
@@ -167,7 +167,7 @@ export default function Navbar() {
             aria-label="Toggle menu"
             style={{
               background: "none",
-              border: "1px solid rgba(15,23,42,0.15)",
+              border: "1px solid rgba(255,255,255,0.15)",
               padding: "8px 12px",
               cursor: "pointer",
               display: "flex",
@@ -181,7 +181,7 @@ export default function Navbar() {
                 style={{
                   width: 20,
                   height: 1,
-                  background: mobileOpen && i === 1 ? "transparent" : "rgba(15,23,42,0.7)",
+                  background: mobileOpen && i === 1 ? "transparent" : "rgba(255,255,255,0.7)",
                   transform: mobileOpen
                     ? i === 0 ? "rotate(45deg) translate(4px, 4px)" : i === 2 ? "rotate(-45deg) translate(4px, -4px)" : "none"
                     : "none",
@@ -205,8 +205,8 @@ export default function Navbar() {
               position: "fixed",
               top: 72, left: 0, right: 0,
               zIndex: 49,
-              background: "rgba(255,255,255,0.98)",
-              borderBottom: "1px solid rgba(15,23,42,0.08)",
+              background: "rgba(5,7,10,0.98)",
+              borderBottom: "1px solid rgba(255,255,255,0.08)",
               backdropFilter: "blur(16px)",
               padding: "2rem 1.5rem",
             }}
@@ -224,8 +224,8 @@ export default function Navbar() {
                     fontWeight: 500,
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
-                    color: "rgba(15,23,42,0.65)",
-                    borderBottom: "1px solid rgba(15,23,42,0.06)",
+                    color: "rgba(255,255,255,0.65)",
+                    borderBottom: "1px solid rgba(255,255,255,0.08)",
                     paddingBottom: "1rem",
                   }}
                 >

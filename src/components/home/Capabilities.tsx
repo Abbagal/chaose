@@ -244,7 +244,7 @@ export default function Capabilities() {
     <section
       ref={ref}
       id="capabilities"
-      style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}
+      style={{ background: "#05070A", position: "relative", overflow: "hidden" }}
     >
       {/* Mesh gradient background */}
       <div className="absolute inset-0 bg-grid" style={{ opacity: 0.3 }} />
@@ -288,7 +288,7 @@ export default function Capabilities() {
                 textTransform: "uppercase",
               }}
             >
-              <span style={{ color: "#0F172A", display: "block" }}>Built For</span>
+              <span style={{ color: "#F2F4F7", display: "block" }}>Built For</span>
               <span
                 style={{
                   display: "block",
@@ -301,14 +301,14 @@ export default function Capabilities() {
               >
                 Contested
               </span>
-              <span style={{ color: "rgba(15,23,42,0.65)", display: "block" }}>Environments</span>
+              <span style={{ color: "rgba(255,255,255,0.65)", display: "block" }}>Environments</span>
             </h2>
             <p
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontSize: "0.9rem",
                 lineHeight: 1.8,
-                color: "rgba(15,23,42,0.35)",
+                color: "rgba(255,255,255,0.35)",
                 maxWidth: 420,
               }}
             >

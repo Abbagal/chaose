@@ -127,7 +127,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       className="relative w-full overflow-hidden"
-      style={{ minHeight: "100svh", background: "#FFFFFF" }}
+      style={{ minHeight: "100svh", background: "#05070A" }}
     >
       {/* ── particle canvas background ─── */}
       <div className="absolute inset-0 z-0">
@@ -168,18 +168,18 @@ export default function Hero() {
         <Globe />
       </motion.div>
 
-      {/* ── left gradient mask ─── */}
+      {/* ── left gradient mask (subtle legibility fade, not occlusion) ─── */}
       <div
         className="absolute inset-0 pointer-events-none z-[4]"
         style={{
           background:
-            "linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 35%, rgba(255,255,255,0.88) 50%, rgba(255,255,255,0.35) 68%, transparent 100%)",
+            "linear-gradient(90deg, #05070A 0%, rgba(5,7,10,0.75) 30%, rgba(5,7,10,0.35) 50%, transparent 72%)",
         }}
       />
       {/* ── bottom fade ─── */}
       <div
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4]"
-        style={{ height: 220, background: "linear-gradient(to top, #FFFFFF, transparent)" }}
+        style={{ height: 220, background: "linear-gradient(to top, #05070A, transparent)" }}
       />
 
       {/* ── scan line ─── */}
@@ -189,13 +189,13 @@ export default function Hero() {
       <div
         className="absolute top-[72px] left-0 right-0 flex items-center justify-between px-6 lg:px-8 py-2 z-20"
         style={{
-          borderBottom: "1px solid rgba(15,23,42,0.08)",
-          background: "rgba(255,255,255,0.7)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          background: "rgba(5,7,10,0.7)",
           backdropFilter: "blur(12px)",
         }}
       >
         <div className="flex items-center gap-6">
-          <span className="terminal-line text-[10px]" style={{ color: "rgba(15,23,42,0.45)" }}>
+          <span className="terminal-line text-[10px]" style={{ color: "rgba(255,255,255,0.45)" }}>
             CHAOS // SOVEREIGN OPERATIONS // {time}
           </span>
           {STATUS_ITEMS.map((s) => (
@@ -204,7 +204,7 @@ export default function Hero() {
                 className="w-1 h-1 rounded-full animate-node-glow"
                 style={{ background: s.color }}
               />
-              <span className="terminal-line text-[10px]" style={{ color: "rgba(15,23,42,0.45)" }}>
+              <span className="terminal-line text-[10px]" style={{ color: "rgba(255,255,255,0.45)" }}>
                 {s.label}:{" "}
                 <span style={{ color: s.color }}>{s.value}</span>
               </span>
@@ -227,18 +227,18 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-8 p-4 glass-panel"
             style={{
-              background: "rgba(255,255,255,0.85)",
+              background: "rgba(255,255,255,0.05)",
               border: "1px solid rgba(139,92,246,0.15)",
               backdropFilter: "blur(16px)",
-              boxShadow: "0 8px 32px rgba(15,23,42,0.08), inset 0 1px 0 rgba(139,92,246,0.06)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(139,92,246,0.06)",
             }}
           >
             {/* Terminal header bar */}
-            <div className="flex items-center gap-2 mb-3 pb-2" style={{ borderBottom: "1px solid rgba(15,23,42,0.08)" }}>
+            <div className="flex items-center gap-2 mb-3 pb-2" style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
               <div className="w-2 h-2 rounded-full" style={{ background: "#F59E0B", opacity: 0.7 }} />
               <div className="w-2 h-2 rounded-full" style={{ background: "#8B5CF6", opacity: 0.7 }} />
               <div className="w-2 h-2 rounded-full" style={{ background: "#22D3EE", opacity: 0.7 }} />
-              <span className="terminal-line ml-2 text-[9px]" style={{ color: "rgba(15,23,42,0.35)" }}>CHAOS_SYS_INIT</span>
+              <span className="terminal-line ml-2 text-[9px]" style={{ color: "rgba(255,255,255,0.35)" }}>CHAOS_SYS_INIT</span>
             </div>
             {BOOT_LINES.map((l, i) => (
               <BootLine key={i} text={l.text} delay={l.delay} highlight={l.highlight} />
@@ -271,7 +271,7 @@ export default function Hero() {
               perspective: "1000px",
             }}
           >
-            <span style={{ color: "#0F172A", display: "block" }}>Decision</span>
+            <span style={{ color: "#F2F4F7", display: "block" }}>Decision</span>
             <span
               className="glitch"
               style={{
@@ -288,7 +288,7 @@ export default function Hero() {
             >
               Superiority
             </span>
-            <span style={{ color: "rgba(15,23,42,0.55)", display: "block", fontSize: "0.6em" }}>
+            <span style={{ color: "rgba(255,255,255,0.55)", display: "block", fontSize: "0.6em" }}>
               For Modern Operations
             </span>
           </motion.h1>
@@ -311,13 +311,13 @@ export default function Hero() {
               fontFamily: "'Inter', sans-serif",
               fontSize: "1.1rem",
               lineHeight: 1.7,
-              color: "rgba(15,23,42,0.6)",
+              color: "rgba(255,255,255,0.6)",
               maxWidth: 520,
               marginBottom: "2.5rem",
             }}
           >
             AI systems that transform fragmented intelligence, sensor feeds, and operational data into{" "}
-            <span style={{ color: "rgba(15,23,42,0.9)", fontWeight: 600 }}>
+            <span style={{ color: "rgba(255,255,255,0.92)", fontWeight: 600 }}>
               mission-ready decisions.
             </span>
           </motion.p>
@@ -347,8 +347,8 @@ export default function Hero() {
             className="grid grid-cols-2 lg:grid-cols-4 glass-panel"
             style={{
               maxWidth: 640,
-              border: "1px solid rgba(15,23,42,0.08)",
-              boxShadow: "0 4px 24px rgba(15,23,42,0.06), inset 0 1px 0 rgba(255,255,255,0.5)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)",
             }}
           >
             {STATS.map((s, i) => (
@@ -364,7 +364,7 @@ export default function Hero() {
                     fontFamily: "'Sora', sans-serif",
                     fontWeight: 900,
                     fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
-                    background: "linear-gradient(135deg, #0F172A 50%, #8B5CF6 100%)",
+                    background: "linear-gradient(135deg, #F2F4F7 50%, #8B5CF6 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -381,7 +381,7 @@ export default function Hero() {
                     fontSize: 9,
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: "rgba(15,23,42,0.45)",
+                    color: "rgba(255,255,255,0.45)",
                   }}
                 >
                   {s.label}
@@ -403,12 +403,12 @@ export default function Hero() {
         <div
           className="p-4 glass-panel-strong"
           style={{
-            boxShadow: "0 16px 64px rgba(15,23,42,0.1), 0 0 0 1px rgba(139,92,246,0.08), inset 0 1px 0 rgba(139,92,246,0.06)",
+            boxShadow: "0 16px 64px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.08), inset 0 1px 0 rgba(139,92,246,0.06)",
           }}
         >
           <div
             className="terminal-line mb-3 pb-3"
-            style={{ borderBottom: "1px solid rgba(15,23,42,0.08)", color: "rgba(15,23,42,0.5)" }}
+            style={{ borderBottom: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)" }}
           >
             <span className="prompt">SYS</span> LIVE INTELLIGENCE FEED
           </div>
@@ -419,10 +419,10 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 4.0 + idx * 0.1 }}
               className="flex items-center justify-between py-2"
-              style={{ borderBottom: "1px solid rgba(15,23,42,0.06)" }}
+              style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
             >
               <div>
-                <div className="terminal-line" style={{ color: "rgba(15,23,42,0.55)", fontSize: 9 }}>
+                <div className="terminal-line" style={{ color: "rgba(255,255,255,0.55)", fontSize: 9 }}>
                   {item.id}
                 </div>
                 <div
@@ -432,14 +432,14 @@ export default function Hero() {
                   {item.type} {"//"} {item.status}
                 </div>
               </div>
-              <div className="terminal-line" style={{ color: "rgba(15,23,42,0.4)", fontSize: 9 }}>
+              <div className="terminal-line" style={{ color: "rgba(255,255,255,0.4)", fontSize: 9 }}>
                 {item.time}
               </div>
             </motion.div>
           ))}
           <div
             className="terminal-line mt-3 pt-2"
-            style={{ borderTop: "1px solid rgba(15,23,42,0.08)", color: "rgba(124,58,237,0.5)", fontSize: 9 }}
+            style={{ borderTop: "1px solid rgba(255,255,255,0.08)", color: "rgba(139,92,246,0.6)", fontSize: 9 }}
           >
             SANJAY-NET // 4,847 NODES // OPERATIONAL
           </div>
@@ -453,7 +453,7 @@ export default function Hero() {
         transition={{ delay: 4.5, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20"
       >
-        <div className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.4)" }}>
+        <div className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.4)" }}>
           SCROLL
         </div>
         <motion.div

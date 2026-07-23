@@ -123,7 +123,7 @@ export default function Technology() {
     <section
       ref={ref}
       id="technology"
-      style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}
+      style={{ background: "#05070A", position: "relative", overflow: "hidden" }}
     >
       <div className="absolute inset-0 bg-grid" style={{ opacity: 0.25 }} />
       <div className="absolute inset-0 mesh-bg" />
@@ -172,7 +172,7 @@ export default function Technology() {
                 textTransform: "uppercase",
               }}
             >
-              <span style={{ color: "#0F172A", display: "block" }}>Deep Research.</span>
+              <span style={{ color: "#F2F4F7", display: "block" }}>Deep Research.</span>
               <span
                 style={{
                   display: "block",
@@ -185,7 +185,7 @@ export default function Technology() {
               >
                 Proven
               </span>
-              <span style={{ color: "rgba(15,23,42,0.65)", display: "block" }}>Systems.</span>
+              <span style={{ color: "rgba(255,255,255,0.65)", display: "block" }}>Systems.</span>
             </h2>
             <div>
               <p
@@ -193,7 +193,7 @@ export default function Technology() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "0.9rem",
                   lineHeight: 1.8,
-                  color: "rgba(15,23,42,0.35)",
+                  color: "rgba(255,255,255,0.35)",
                   marginBottom: "1.5rem",
                 }}
               >
@@ -219,7 +219,7 @@ export default function Technology() {
         </motion.div>
 
         {/* Tech matrix with 3D hover */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px perspective-container" style={{ background: "rgba(15,23,42,0.03)" }}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px perspective-container" style={{ background: "rgba(255,255,255,0.03)" }}>
           {DOMAINS.map((tech, i) => (
             <motion.div
               key={i}
@@ -376,7 +376,7 @@ export default function Technology() {
               <div className="terminal-line mb-1" style={{ fontSize: 9, color: "rgba(139,92,246,0.35)" }}>
                 RESEARCH ACCESS
               </div>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(15,23,42,0.32)" }}>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.82rem", color: "rgba(255,255,255,0.32)" }}>
                 Publications, technical papers, and capability demonstrations available to cleared partners under NDA.
               </p>
             </div>

@@ -47,7 +47,7 @@ export default function MissionStatement() {
   return (
     <section
       ref={ref}
-      style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}
+      style={{ background: "#05070A", position: "relative", overflow: "hidden" }}
     >
       {/* Top divider */}
       <div className="glow-line" />
@@ -93,7 +93,7 @@ export default function MissionStatement() {
                 marginBottom: "1.5rem",
               }}
             >
-              <span style={{ color: "#0F172A", display: "block" }}>Chaos is a</span>
+              <span style={{ color: "#F2F4F7", display: "block" }}>Chaos is a</span>
               <span
                 style={{
                   display: "block",
@@ -106,7 +106,7 @@ export default function MissionStatement() {
               >
                 Defence AI
               </span>
-              <span style={{ color: "rgba(15,23,42,0.7)", display: "block" }}>Research Lab.</span>
+              <span style={{ color: "rgba(255,255,255,0.7)", display: "block" }}>Research Lab.</span>
             </h2>
 
             {/* System tags */}
@@ -172,7 +172,7 @@ export default function MissionStatement() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "1.15rem",
                   lineHeight: 1.75,
-                  color: "rgba(15,23,42,0.65)",
+                  color: "rgba(255,255,255,0.65)",
                   fontStyle: "italic",
                   marginBottom: "1rem",
                 }}
@@ -190,7 +190,7 @@ export default function MissionStatement() {
             {/* Metrics row */}
             <div
               className="grid grid-cols-3 gap-px"
-              style={{ background: "rgba(15,23,42,0.06)" }}
+              style={{ background: "rgba(255,255,255,0.06)" }}
             >
               {[
                 { n: "17+", l: "Nations" },
@@ -203,17 +203,17 @@ export default function MissionStatement() {
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
                   style={{
-                    background: "rgba(255,255,255,0.95)",
+                    background: "rgba(255,255,255,0.04)",
                     padding: "16px 20px",
                     borderTop: "2px solid rgba(139,92,246,0.15)",
                     transition: "background 0.3s, border-color 0.3s",
                   }}
                   onMouseEnter={e => {
-                    (e.currentTarget as HTMLDivElement).style.background = "rgba(139,92,246,0.03)";
+                    (e.currentTarget as HTMLDivElement).style.background = "rgba(139,92,246,0.06)";
                     (e.currentTarget as HTMLDivElement).style.borderTopColor = "rgba(139,92,246,0.4)";
                   }}
                   onMouseLeave={e => {
-                    (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.95)";
+                    (e.currentTarget as HTMLDivElement).style.background = "rgba(255,255,255,0.04)";
                     (e.currentTarget as HTMLDivElement).style.borderTopColor = "rgba(139,92,246,0.15)";
                   }}
                 >
@@ -232,7 +232,7 @@ export default function MissionStatement() {
                   >
                     {m.n}
                   </div>
-                  <div className="terminal-line" style={{ color: "rgba(15,23,42,0.45)", fontSize: 9 }}>
+                  <div className="terminal-line" style={{ color: "rgba(255,255,255,0.45)", fontSize: 9 }}>
                     {m.l}
                   </div>
                 </motion.div>
@@ -251,24 +251,24 @@ export default function MissionStatement() {
               transition={{ duration: 0.7, delay: 0.3 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="relative overflow-hidden"
               style={{
-                background: "rgba(255,255,255,0.9)",
-                border: `1px solid rgba(15,23,42,0.08)`,
+                background: "rgba(255,255,255,0.03)",
+                border: `1px solid rgba(255,255,255,0.08)`,
                 padding: "2rem",
                 cursor: "default",
-                boxShadow: "0 2px 12px rgba(15,23,42,0.04)",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.4)",
                 transition: "background 0.3s, border-color 0.3s, box-shadow 0.3s",
               }}
               onMouseEnter={e => {
                 const el = e.currentTarget;
-                el.style.background = "rgba(255,255,255,1)";
+                el.style.background = "rgba(255,255,255,0.06)";
                 el.style.borderColor = `${p.accent}30`;
-                el.style.boxShadow = `0 16px 48px rgba(15,23,42,0.08), 0 0 24px ${p.accent}10`;
+                el.style.boxShadow = `0 16px 48px rgba(0,0,0,0.5), 0 0 24px ${p.accent}10`;
               }}
               onMouseLeave={e => {
                 const el = e.currentTarget;
-                el.style.background = "rgba(255,255,255,0.9)";
-                el.style.borderColor = "rgba(15,23,42,0.08)";
-                el.style.boxShadow = "0 2px 12px rgba(15,23,42,0.04)";
+                el.style.background = "rgba(255,255,255,0.03)";
+                el.style.borderColor = "rgba(255,255,255,0.08)";
+                el.style.boxShadow = "0 2px 12px rgba(0,0,0,0.4)";
               }}
             >
               {/* Top accent bar */}
@@ -288,7 +288,7 @@ export default function MissionStatement() {
               </div>
 
               <div className="flex items-center justify-between mb-4">
-                <div className="terminal-line" style={{ color: "rgba(15,23,42,0.35)", fontSize: 10 }}>
+                <div className="terminal-line" style={{ color: "rgba(255,255,255,0.35)", fontSize: 10 }}>
                   {p.code} //
                 </div>
                 <span
@@ -306,7 +306,7 @@ export default function MissionStatement() {
                   fontSize: "1.05rem",
                   textTransform: "uppercase",
                   letterSpacing: "0.05em",
-                  color: "#0F172A",
+                  color: "#F2F4F7",
                   marginBottom: "0.75rem",
                 }}
               >
@@ -318,7 +318,7 @@ export default function MissionStatement() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "0.875rem",
                   lineHeight: 1.7,
-                  color: "rgba(15,23,42,0.55)",
+                  color: "rgba(255,255,255,0.55)",
                 }}
               >
                 {p.body}

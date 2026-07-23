@@ -76,7 +76,7 @@ const clearanceColor: Record<string, string> = {
   "TS/SCI/NOFORN": "#F59E0B",
   SECRET: "#8B5CF6",
   CUI: "#22D3EE",
-  UNCLASSIFIED: "rgba(15,23,42,0.3)",
+  UNCLASSIFIED: "rgba(255,255,255,0.35)",
 };
 
 export default function Industries() {
@@ -87,7 +87,7 @@ export default function Industries() {
     <section
       ref={ref}
       id="industries"
-      style={{ background: "#FFFFFF", position: "relative", overflow: "hidden" }}
+      style={{ background: "#05070A", position: "relative", overflow: "hidden" }}
     >
       <div className="absolute inset-0 tactical-grid" style={{ opacity: 0.35 }} />
       <div className="absolute inset-0 mesh-bg" />
@@ -125,7 +125,7 @@ export default function Industries() {
                 textTransform: "uppercase",
               }}
             >
-              <span style={{ color: "#0F172A", display: "block" }}>National</span>
+              <span style={{ color: "#F2F4F7", display: "block" }}>National</span>
               <span
                 style={{
                   display: "block",
@@ -138,7 +138,7 @@ export default function Industries() {
               >
                 Security
               </span>
-              <span style={{ color: "rgba(15,23,42,0.65)", display: "block" }}>Domains</span>
+              <span style={{ color: "rgba(255,255,255,0.65)", display: "block" }}>Domains</span>
             </h2>
             <div>
               <p
@@ -146,7 +146,7 @@ export default function Industries() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "0.9rem",
                   lineHeight: 1.8,
-                  color: "rgba(15,23,42,0.35)",
+                  color: "rgba(255,255,255,0.35)",
                   marginBottom: "1rem",
                 }}
               >
@@ -180,8 +180,8 @@ export default function Industries() {
                 intensity={6}
                 glare
                 style={{
-                  background: "rgba(255,255,255,0.9)",
-                  border: "1px solid rgba(15,23,42,0.055)",
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
                   padding: "1.5rem",
                   minHeight: 200,
                   height: "100%",
@@ -201,7 +201,7 @@ export default function Industries() {
 
                 {/* ID + clearance */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.16)" }}>
+                  <div className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.2)" }}>
                     {ind.id}
                   </div>
                   <span
@@ -220,7 +220,7 @@ export default function Industries() {
                     fontSize: "1rem",
                     textTransform: "uppercase",
                     letterSpacing: "0.04em",
-                    color: "#0F172A",
+                    color: "#F2F4F7",
                     marginBottom: "0.25rem",
                   }}
                 >
@@ -236,7 +236,7 @@ export default function Industries() {
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "0.78rem",
                     lineHeight: 1.65,
-                    color: "rgba(15,23,42,0.3)",
+                    color: "rgba(255,255,255,0.4)",
                     marginBottom: "1rem",
                   }}
                 >
@@ -291,7 +291,7 @@ export default function Industries() {
               }}
             >
               <div>
-                <div className="terminal-line mb-4" style={{ fontSize: 9, color: "rgba(15,23,42,0.16)" }}>
+                <div className="terminal-line mb-4" style={{ fontSize: 9, color: "rgba(255,255,255,0.2)" }}>
                   SECTOR-08
                 </div>
                 <h3
@@ -300,13 +300,13 @@ export default function Industries() {
                     fontWeight: 800,
                     fontSize: "1rem",
                     textTransform: "uppercase",
-                    color: "rgba(15,23,42,0.45)",
+                    color: "rgba(255,255,255,0.55)",
                     marginBottom: "0.5rem",
                   }}
                 >
                   Special Programs
                 </h3>
-                <p className="terminal-line" style={{ fontSize: 9, color: "rgba(15,23,42,0.18)", lineHeight: 1.7 }}>
+                <p className="terminal-line" style={{ fontSize: 9, color: "rgba(255,255,255,0.25)", lineHeight: 1.7 }}>
                   Bespoke sovereign AI deployments for classified environments and special access programs. Contact for details.
                 </p>
               </div>

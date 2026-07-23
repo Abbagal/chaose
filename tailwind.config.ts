@@ -15,19 +15,19 @@ const config: Config = {
           tertiary: "#111820",
         },
         accent: {
-          cyan: "#7DF9FF",
-          green: "#00FFB3",
-          orange: "#FF6B35",
+          cyan: "#22D3EE",
+          green: "#8B5CF6",
+          orange: "#F59E0B",
         },
         grid: "rgba(255,255,255,0.05)",
         border: {
           DEFAULT: "rgba(255,255,255,0.08)",
-          accent: "rgba(125,249,255,0.3)",
+          accent: "rgba(139,92,246,0.3)",
         },
       },
       fontFamily: {
-        tight: ["var(--font-inter-tight)", "sans-serif"],
-        grotesk: ["var(--font-space-grotesk)", "sans-serif"],
+        tight: ["var(--font-tight)", "sans-serif"],
+        grotesk: ["var(--font-grotesk)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],
       },
       fontSize: {
@@ -38,9 +38,9 @@ const config: Config = {
         "grid-pattern":
           "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
         "radial-glow":
-          "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(125,249,255,0.15), transparent)",
+          "radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139,92,246,0.15), transparent)",
         "radial-glow-green":
-          "radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0,255,179,0.1), transparent)",
+          "radial-gradient(ellipse 60% 40% at 50% 100%, rgba(34,211,238,0.1), transparent)",
       },
       backgroundSize: {
         grid: "60px 60px",
@@ -72,10 +72,10 @@ const config: Config = {
         },
       },
       boxShadow: {
-        "glow-cyan": "0 0 30px rgba(125,249,255,0.2)",
-        "glow-green": "0 0 30px rgba(0,255,179,0.2)",
-        "glow-orange": "0 0 30px rgba(255,107,53,0.2)",
-        "inner-glow": "inset 0 0 60px rgba(125,249,255,0.05)",
+        "glow-cyan": "0 0 30px rgba(34,211,238,0.2)",
+        "glow-green": "0 0 30px rgba(139,92,246,0.2)",
+        "glow-orange": "0 0 30px rgba(245,158,11,0.2)",
+        "inner-glow": "inset 0 0 60px rgba(139,92,246,0.05)",
       },
     },
   },
